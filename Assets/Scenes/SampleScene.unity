@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 18684797}
   - component: {fileID: 18684800}
   m_Layer: 0
-  m_Name: City (20)
+  m_Name: City 4
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 45448602}
   - component: {fileID: 45448605}
   m_Layer: 0
-  m_Name: City (18)
+  m_Name: City 7
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 113574560}
   - component: {fileID: 113574563}
   m_Layer: 0
-  m_Name: City (5)
+  m_Name: City 20
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -663,107 +663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &186633142
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 186633143}
-  - component: {fileID: 186633146}
-  - component: {fileID: 186633145}
-  - component: {fileID: 186633144}
-  m_Layer: 0
-  m_Name: CanvasPlayer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &186633143
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 186633142}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 490588166}
-  m_Father: {fileID: 1866694698}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
---- !u!114 &186633144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 186633142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &186633145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 186633142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &186633146
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 186633142}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
 --- !u!1 &245958439
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +676,7 @@ GameObject:
   - component: {fileID: 245958441}
   - component: {fileID: 245958444}
   m_Layer: 0
-  m_Name: City (14)
+  m_Name: City 28
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -875,86 +774,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &414353670
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 414353671}
-  - component: {fileID: 414353673}
-  - component: {fileID: 414353672}
-  m_Layer: 0
-  m_Name: Text (Legacy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &414353671
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414353670}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 490588166}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &414353672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414353670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Roll
---- !u!222 &414353673
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414353670}
-  m_CullTransparentMesh: 1
 --- !u!1 &463821680
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,7 +787,7 @@ GameObject:
   - component: {fileID: 463821682}
   - component: {fileID: 463821685}
   m_Layer: 0
-  m_Name: City (17)
+  m_Name: City 6
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1177,7 +996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &490588165
+--- !u!1 &557631742
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1185,176 +1004,30 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 490588166}
-  - component: {fileID: 490588169}
-  - component: {fileID: 490588168}
-  - component: {fileID: 490588167}
+  - component: {fileID: 557631743}
   m_Layer: 0
-  m_Name: Roll
+  m_Name: '##View##'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &490588166
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490588165}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 414353671}
-  m_Father: {fileID: 186633143}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3, y: -51.4}
-  m_SizeDelta: {x: 116.2022, y: 42.1739}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &490588167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490588165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 490588168}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 529605810}
-        m_TargetAssemblyTypeName: CanvasPlayerController, Assembly-CSharp
-        m_MethodName: Roll
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &490588168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490588165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.025006847, g: 0.4716981, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &490588169
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490588165}
-  m_CullTransparentMesh: 1
---- !u!1 &529605808
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 529605809}
-  - component: {fileID: 529605810}
-  m_Layer: 0
-  m_Name: CanvasPlayerController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &529605809
+--- !u!4 &557631743
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 529605808}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 557631742}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.616251, y: 5.839323, z: 4.894614}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1866694698}
-  m_RootOrder: 2
+  m_Children:
+  - {fileID: 1669231197}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &529605810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 529605808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50594c0ce978bea4c99a93c9d3a9774b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &630793902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,7 +1041,7 @@ GameObject:
   - component: {fileID: 630793904}
   - component: {fileID: 630793907}
   m_Layer: 0
-  m_Name: City (29)
+  m_Name: City 9
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1490,7 +1163,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679372032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.523695, y: -10.07848, z: 7.847452}
+  m_LocalPosition: {x: -6.907444, y: -15.917803, z: 2.952838}
   m_LocalScale: {x: 1.3, y: 1, z: 1.3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1498,8 +1171,8 @@ Transform:
   - {fileID: 1647787493}
   - {fileID: 1684793812}
   - {fileID: 1781552489}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 944125455}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &758661221
 GameObject:
@@ -1514,7 +1187,7 @@ GameObject:
   - component: {fileID: 758661223}
   - component: {fileID: 758661226}
   m_Layer: 0
-  m_Name: City (22)
+  m_Name: City 2
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1625,7 +1298,7 @@ GameObject:
   - component: {fileID: 862281255}
   - component: {fileID: 862281258}
   m_Layer: 0
-  m_Name: City (25)
+  m_Name: City 13
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1736,7 +1409,7 @@ GameObject:
   - component: {fileID: 875931539}
   - component: {fileID: 875931542}
   m_Layer: 0
-  m_Name: City (21)
+  m_Name: City 3
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1847,7 +1520,7 @@ GameObject:
   - component: {fileID: 891441356}
   - component: {fileID: 891441359}
   m_Layer: 0
-  m_Name: City (10)
+  m_Name: City 24
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1945,6 +1618,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &944125454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 944125455}
+  m_Layer: 0
+  m_Name: '##Scene##'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &944125455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944125454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.616251, y: 5.839323, z: 4.894614}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1053189068}
+  - {fileID: 679372033}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &956981605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1958,7 +1664,7 @@ GameObject:
   - component: {fileID: 956981607}
   - component: {fileID: 956981610}
   m_Layer: 0
-  m_Name: City (3)
+  m_Name: City 18
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2079,8 +1785,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053189067}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.7, y: -26.2, z: -4.21961}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.9162512, y: -32.03932, z: -9.114224}
   m_LocalScale: {x: 1.3, y: 1, z: 1.3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2116,8 +1822,8 @@ Transform:
   - {fileID: 1726374814}
   - {fileID: 1358270969}
   - {fileID: 245958443}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 944125455}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1054969899
 GameObject:
@@ -2132,7 +1838,7 @@ GameObject:
   - component: {fileID: 1054969901}
   - component: {fileID: 1054969904}
   m_Layer: 0
-  m_Name: City (30)
+  m_Name: City 8
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2243,7 +1949,7 @@ GameObject:
   - component: {fileID: 1076874164}
   - component: {fileID: 1076874165}
   m_Layer: 0
-  m_Name: City
+  m_Name: City 16
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2354,7 +2060,7 @@ GameObject:
   - component: {fileID: 1084561734}
   - component: {fileID: 1084561737}
   m_Layer: 0
-  m_Name: City (4)
+  m_Name: City 19
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2452,74 +2158,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1168930232
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1168930233}
-  - component: {fileID: 1168930235}
-  - component: {fileID: 1168930234}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1168930233
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1168930232}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.003288, y: -0.7420132, z: -5.362294}
-  m_LocalScale: {x: 0.9490786, y: 0.8729567, z: 0.9490786}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1866694698}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1168930234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1168930232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &1168930235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1168930232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
 --- !u!1 &1210461699
 GameObject:
   m_ObjectHideFlags: 0
@@ -2644,7 +2282,7 @@ GameObject:
   - component: {fileID: 1235486116}
   - component: {fileID: 1235486119}
   m_Layer: 0
-  m_Name: City (9)
+  m_Name: City 23
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2755,7 +2393,7 @@ GameObject:
   - component: {fileID: 1273534842}
   - component: {fileID: 1273534845}
   m_Layer: 0
-  m_Name: City (31)
+  m_Name: City 14
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2853,6 +2491,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1294233836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1294233837}
+  m_Layer: 0
+  m_Name: '##Manager##'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1294233837
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294233836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.616251, y: 5.839323, z: 4.894614}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1358270965
 GameObject:
   m_ObjectHideFlags: 0
@@ -2866,7 +2535,7 @@ GameObject:
   - component: {fileID: 1358270967}
   - component: {fileID: 1358270970}
   m_Layer: 0
-  m_Name: City (13)
+  m_Name: City 27
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2964,6 +2633,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1359576368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1359576369}
+  m_Layer: 0
+  m_Name: '##UI##'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1359576369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359576368}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.616251, y: 5.839323, z: 4.894614}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1410140736
 GameObject:
   m_ObjectHideFlags: 0
@@ -2977,7 +2677,7 @@ GameObject:
   - component: {fileID: 1410140738}
   - component: {fileID: 1410140741}
   m_Layer: 0
-  m_Name: City (1)
+  m_Name: City 15
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3186,6 +2886,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1523929621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1523929622}
+  m_Layer: 0
+  m_Name: '##Gameplay##'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1523929622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523929621}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.616251, y: 5.839323, z: 4.894614}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1866694698}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1595306201
 GameObject:
   m_ObjectHideFlags: 0
@@ -3199,7 +2931,7 @@ GameObject:
   - component: {fileID: 1595306203}
   - component: {fileID: 1595306206}
   m_Layer: 0
-  m_Name: City (23)
+  m_Name: City 1
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3310,7 +3042,7 @@ GameObject:
   - component: {fileID: 1596305211}
   - component: {fileID: 1596305214}
   m_Layer: 0
-  m_Name: City (26)
+  m_Name: City 12
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3504,7 +3236,7 @@ GameObject:
   - component: {fileID: 1658547216}
   - component: {fileID: 1658547219}
   m_Layer: 0
-  m_Name: City (28)
+  m_Name: City 10
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3679,11 +3411,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669231194}
   m_LocalRotation: {x: 0.38545406, y: 0.31918013, z: -0.14411534, w: 0.85368615}
-  m_LocalPosition: {x: -22.6, y: 40.46, z: -30.1}
+  m_LocalPosition: {x: -16.98375, y: 34.620674, z: -34.994614}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 557631743}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 48.6, y: 41, z: 0}
 --- !u!1 &1684793808
@@ -3782,7 +3514,7 @@ GameObject:
   - component: {fileID: 1726374812}
   - component: {fileID: 1726374815}
   m_Layer: 0
-  m_Name: City (12)
+  m_Name: City 26
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3976,7 +3708,7 @@ GameObject:
   - component: {fileID: 1835086651}
   - component: {fileID: 1835086654}
   m_Layer: 0
-  m_Name: City (19)
+  m_Name: City 5
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4087,7 +3819,7 @@ GameObject:
   - component: {fileID: 1836518006}
   - component: {fileID: 1836518009}
   m_Layer: 0
-  m_Name: City (27)
+  m_Name: City 11
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4198,7 +3930,7 @@ GameObject:
   - component: {fileID: 1864733647}
   - component: {fileID: 1864733650}
   m_Layer: 0
-  m_Name: City (6)
+  m_Name: City 21
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4388,16 +4120,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866694694}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.86, y: 1.12, z: -12.57}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.2437491, y: -4.719323, z: -17.464615}
   m_LocalScale: {x: 1.0536535, y: 1.1455321, z: 1.0536535}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 186633143}
-  - {fileID: 1168930233}
-  - {fileID: 529605809}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Children: []
+  m_Father: {fileID: 1523929622}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1866694701
 MonoBehaviour:
@@ -4411,7 +4140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503f3c3d2d30c394c8ee16bcf8adc59d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RandomNum: 0
+  RandomNum: 10
   _round: 0
   _speed: 0.2
 --- !u!54 &1866694702
@@ -4443,7 +4172,7 @@ GameObject:
   - component: {fileID: 1945428398}
   - component: {fileID: 1945428401}
   m_Layer: 0
-  m_Name: City (11)
+  m_Name: City 25
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4554,7 +4283,7 @@ GameObject:
   - component: {fileID: 1963721077}
   - component: {fileID: 1963721080}
   m_Layer: 0
-  m_Name: City (15)
+  m_Name: City 22
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4665,7 +4394,7 @@ GameObject:
   - component: {fileID: 2062689908}
   - component: {fileID: 2062689911}
   m_Layer: 0
-  m_Name: City (2)
+  m_Name: City 17
   m_TagString: Houses
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

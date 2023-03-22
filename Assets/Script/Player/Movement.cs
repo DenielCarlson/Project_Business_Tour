@@ -6,20 +6,55 @@ using UnityEngine.Android;
 
 public class Movement : MonoBehaviour
 {
-
-    private GameObject[] _cities;//Array que vai Armazenar todos os blocos do jogo
     private Vector3 direction;//Direção que o player vai seguir
     private Vector3 _currentPos;//posição atual do player
+
+    private GameObject[] _cities;//Array que vai Armazenar todos os blocos do jogo
+
     public int RandomNum;//Essa variavel guarda um número aleatório
-    
+
     [SerializeField] private int _round = 0;//Round que o player tá
-    
     [SerializeField] private float _speed;//Velocidade que o player se movimenta
 
 
-    private void Start()//Aqui o array _cities é inicializado pegando todos os gameObjects com a tag Houses, ou seja, as cidades
+    private void Start()//Aqui o array _cities é inicializado pegando todos os gameObjects, os blocos no caso
     {
-        _cities = GameObject.FindGameObjectsWithTag("Houses");
+        _cities = new GameObject[]
+        {
+            GameObject.Find("Start"),
+            GameObject.Find("City 1"),
+            GameObject.Find("City 2"),
+            GameObject.Find("City 3"),
+            GameObject.Find("City 4"),
+            GameObject.Find("City 5"),
+            GameObject.Find("City 6"),
+            GameObject.Find("City 7"),
+            GameObject.Find("Lost Island"),
+            GameObject.Find("City 8"),
+            GameObject.Find("City 9"),
+            GameObject.Find("City 10"),
+            GameObject.Find("City 11"),
+            GameObject.Find("City 12"),
+            GameObject.Find("City 13"),
+            GameObject.Find("City 14"),
+            GameObject.Find("World Championships"),
+            GameObject.Find("City 15"),
+            GameObject.Find("City 16"),
+            GameObject.Find("City 17"),
+            GameObject.Find("City 18"),
+            GameObject.Find("City 19"),
+            GameObject.Find("City 20"),
+            GameObject.Find("City 21"),
+            GameObject.Find("World Tour"),
+            GameObject.Find("City 22"),
+            GameObject.Find("City 23"),
+            GameObject.Find("City 24"),
+            GameObject.Find("City 25"),
+            GameObject.Find("City 26"),
+            GameObject.Find("City 27"),
+            GameObject.Find("City 28"),
+        };
+
 
     }
 
@@ -29,16 +64,16 @@ public class Movement : MonoBehaviour
 
 
         //_currentPos recebe as coordenadas x e z de _cities[RandomNum] que no caso é a posição que o player deve ir
-         _currentPos = new Vector3(_cities[RandomNum].transform.position.x, transform.position.y, _cities[RandomNum].transform.position.z);
+        _currentPos = new Vector3(_cities[RandomNum].transform.position.x, transform.position.y, _cities[RandomNum].transform.position.z);
 
         // Se a poção do player for diferente de _currentPos, ele deve se mover pelo tabuleiro até que sua posiçãi seja igual a _currentPos
-          if (transform.position != _currentPos)
-          {
+        if (transform.position != _currentPos)
+        {
 
             // Player se movimento em seu próprio eixo de acordo com a direção da variavel direction
-              transform.Translate(direction, Space.Self);
+            transform.Translate(direction, Space.Self);
 
-          }
+        }
     }
 
     public void RollDice()// esse método me retorna um número aleatório
@@ -56,14 +91,14 @@ public class Movement : MonoBehaviour
         }
     }
 
-  
+
 
 
     private void OnTriggerEnter(Collider other)
     {
 
         //Quando o player se colidir com algo, no caso as cidades, ele sempre ficará na mesma posição do eixo x, e z dessa mesma cidade
-       transform.position = new Vector3(other.gameObject.transform.position.x, transform.position.y, other.gameObject.transform.position.z);
+        transform.position = new Vector3(other.gameObject.transform.position.x, transform.position.y, other.gameObject.transform.position.z);
 
         //Se o player estiver colidindo com blocos da tag Houses que são as cidades o if se ativará
         if (other.gameObject.CompareTag("Houses"))
@@ -72,7 +107,7 @@ public class Movement : MonoBehaviour
             //se ele estiver no bloco Start, a direção do player é Subindo e roud é incrementado + 1
             if (other.gameObject == GameObject.Find("Start"))
             {
-                    _round++;
+                _round++;
                 direction = new Vector3(0, 0, 1 * Time.deltaTime * _speed);
             }
 
