@@ -7,11 +7,14 @@ using UnityEngine.UI;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
+    private PhotonView photonView;
 
     public Text ServerInfo;
 
     private void Awake()
     {
+
+        photonView = GetComponent<PhotonView>();
 
         PhotonNetwork.ConnectUsingSettings();
         PhotonNetwork.LocalPlayer.NickName = "DenielTeste";
@@ -55,7 +58,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         ServerInfo.text += "\nVocê entrou na sala";
+        ServerInfo.text += "\nMeu id: " + PhotonNetwork.LocalPlayer;
 
+        GameManager.Instance.photonView.RPC("StartGame", RpcTarget.AllBuffered);
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)

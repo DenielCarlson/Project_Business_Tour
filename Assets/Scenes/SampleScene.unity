@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 18684798}
   - component: {fileID: 18684797}
   - component: {fileID: 18684800}
+  - component: {fileID: 18684801}
   m_Layer: 0
   m_Name: City 4
   m_TagString: LeftCity
@@ -234,6 +235,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &18684801
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18684795}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &30331688
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +346,7 @@ GameObject:
   - component: {fileID: 45448603}
   - component: {fileID: 45448602}
   - component: {fileID: 45448605}
+  - component: {fileID: 45448606}
   m_Layer: 0
   m_Name: City 7
   m_TagString: LeftCity
@@ -428,6 +446,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &45448606
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45448600}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &113574558
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,6 +474,7 @@ GameObject:
   - component: {fileID: 113574561}
   - component: {fileID: 113574560}
   - component: {fileID: 113574563}
+  - component: {fileID: 113574564}
   m_Layer: 0
   m_Name: City 20
   m_TagString: RightCity
@@ -539,6 +574,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &113574564
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113574558}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &180964738
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,6 +683,7 @@ GameObject:
   - component: {fileID: 182972253}
   - component: {fileID: 182972256}
   - component: {fileID: 182972257}
+  - component: {fileID: 182972258}
   m_Layer: 0
   m_Name: Lost Island
   m_TagString: Houses
@@ -743,6 +795,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &182972258
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182972251}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &245958439
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,6 +823,7 @@ GameObject:
   - component: {fileID: 245958442}
   - component: {fileID: 245958441}
   - component: {fileID: 245958444}
+  - component: {fileID: 245958445}
   m_Layer: 0
   m_Name: City 28
   m_TagString: DownCity
@@ -854,6 +923,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &245958445
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245958439}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &463821680
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,6 +951,7 @@ GameObject:
   - component: {fileID: 463821683}
   - component: {fileID: 463821682}
   - component: {fileID: 463821685}
+  - component: {fileID: 463821686}
   m_Layer: 0
   m_Name: City 6
   m_TagString: LeftCity
@@ -965,6 +1051,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &463821686
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463821680}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &478889407
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,6 +1079,7 @@ GameObject:
   - component: {fileID: 478889410}
   - component: {fileID: 478889409}
   - component: {fileID: 478889412}
+  - component: {fileID: 478889413}
   m_Layer: 0
   m_Name: World Tour
   m_TagString: Houses
@@ -1076,6 +1179,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &478889413
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478889407}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &522258794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,6 +1204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 522258795}
+  - component: {fileID: 522258797}
   - component: {fileID: 522258796}
   m_Layer: 0
   m_Name: NetwotkManagerTemporary
@@ -1121,6 +1241,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ServerInfo: {fileID: 180964740}
+--- !u!114 &522258797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522258794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 999
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &557631742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,6 +1307,7 @@ GameObject:
   - component: {fileID: 630793905}
   - component: {fileID: 630793904}
   - component: {fileID: 630793907}
+  - component: {fileID: 630793908}
   m_Layer: 0
   m_Name: City 9
   m_TagString: UpCity
@@ -1264,6 +1407,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &630793908
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630793902}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &679372032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,6 +1490,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1011771210}
+  - {fileID: 795617412}
   m_Father: {fileID: 1359576369}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1412,6 +1572,7 @@ GameObject:
   - component: {fileID: 758661224}
   - component: {fileID: 758661223}
   - component: {fileID: 758661226}
+  - component: {fileID: 758661227}
   m_Layer: 0
   m_Name: City 2
   m_TagString: LeftCity
@@ -1511,6 +1672,123 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &758661227
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758661221}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!1 &795617411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 795617412}
+  - component: {fileID: 795617415}
+  - component: {fileID: 795617414}
+  - component: {fileID: 795617413}
+  m_Layer: 0
+  m_Name: RollUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &795617412
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795617411}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1069168738}
+  m_Father: {fileID: 724784116}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &795617413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795617411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &795617414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795617411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &795617415
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795617411}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &862281253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,6 +1801,7 @@ GameObject:
   - component: {fileID: 862281256}
   - component: {fileID: 862281255}
   - component: {fileID: 862281258}
+  - component: {fileID: 862281259}
   m_Layer: 0
   m_Name: City 13
   m_TagString: UpCity
@@ -1622,6 +1901,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &862281259
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862281253}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &875931537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1634,6 +1929,7 @@ GameObject:
   - component: {fileID: 875931540}
   - component: {fileID: 875931539}
   - component: {fileID: 875931542}
+  - component: {fileID: 875931543}
   m_Layer: 0
   m_Name: City 3
   m_TagString: LeftCity
@@ -1733,6 +2029,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &875931543
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875931537}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &891441354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1745,6 +2057,7 @@ GameObject:
   - component: {fileID: 891441357}
   - component: {fileID: 891441356}
   - component: {fileID: 891441359}
+  - component: {fileID: 891441360}
   m_Layer: 0
   m_Name: City 24
   m_TagString: DownCity
@@ -1844,6 +2157,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &891441360
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891441354}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &944125454
 GameObject:
   m_ObjectHideFlags: 0
@@ -1889,6 +2218,7 @@ GameObject:
   - component: {fileID: 956981608}
   - component: {fileID: 956981607}
   - component: {fileID: 956981610}
+  - component: {fileID: 956981611}
   m_Layer: 0
   m_Name: City 18
   m_TagString: RightCity
@@ -1988,6 +2318,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &956981611
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956981605}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!1 &1000763226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1000763227}
+  - component: {fileID: 1000763229}
+  - component: {fileID: 1000763228}
+  m_Layer: 0
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1000763227
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000763226}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1069168738}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1000763228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000763226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Roll
+--- !u!222 &1000763229
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000763226}
+  m_CullTransparentMesh: 1
 --- !u!1 &1011771209
 GameObject:
   m_ObjectHideFlags: 0
@@ -2164,6 +2590,7 @@ GameObject:
   - component: {fileID: 1054969902}
   - component: {fileID: 1054969901}
   - component: {fileID: 1054969904}
+  - component: {fileID: 1054969905}
   m_Layer: 0
   m_Name: City 8
   m_TagString: UpCity
@@ -2263,6 +2690,156 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1054969905
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054969899}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!1 &1069168737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1069168738}
+  - component: {fileID: 1069168741}
+  - component: {fileID: 1069168740}
+  - component: {fileID: 1069168739}
+  m_Layer: 0
+  m_Name: BtnRoll
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1069168738
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069168737}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1000763227}
+  m_Father: {fileID: 795617412}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -183.17}
+  m_SizeDelta: {x: 160, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1069168739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069168737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1069168740}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1474566637}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnRollDiceClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1069168740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069168737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1069168741
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069168737}
+  m_CullTransparentMesh: 1
 --- !u!1 &1076874161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2275,6 +2852,7 @@ GameObject:
   - component: {fileID: 1076874162}
   - component: {fileID: 1076874164}
   - component: {fileID: 1076874165}
+  - component: {fileID: 1076874166}
   m_Layer: 0
   m_Name: City 16
   m_TagString: RightCity
@@ -2374,6 +2952,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1076874166
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076874161}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1084561732
 GameObject:
   m_ObjectHideFlags: 0
@@ -2386,6 +2980,7 @@ GameObject:
   - component: {fileID: 1084561735}
   - component: {fileID: 1084561734}
   - component: {fileID: 1084561737}
+  - component: {fileID: 1084561738}
   m_Layer: 0
   m_Name: City 19
   m_TagString: RightCity
@@ -2485,6 +3080,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1084561738
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084561732}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1210461699
 GameObject:
   m_ObjectHideFlags: 0
@@ -2497,6 +3108,7 @@ GameObject:
   - component: {fileID: 1210461702}
   - component: {fileID: 1210461701}
   - component: {fileID: 1210461704}
+  - component: {fileID: 1210461705}
   m_Layer: 0
   m_Name: World Championships
   m_TagString: Houses
@@ -2596,6 +3208,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1210461705
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210461699}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1235486114
 GameObject:
   m_ObjectHideFlags: 0
@@ -2608,6 +3236,7 @@ GameObject:
   - component: {fileID: 1235486117}
   - component: {fileID: 1235486116}
   - component: {fileID: 1235486119}
+  - component: {fileID: 1235486120}
   m_Layer: 0
   m_Name: City 23
   m_TagString: DownCity
@@ -2707,6 +3336,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1235486120
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235486114}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1273534840
 GameObject:
   m_ObjectHideFlags: 0
@@ -2719,6 +3364,7 @@ GameObject:
   - component: {fileID: 1273534843}
   - component: {fileID: 1273534842}
   - component: {fileID: 1273534845}
+  - component: {fileID: 1273534846}
   m_Layer: 0
   m_Name: City 14
   m_TagString: UpCity
@@ -2818,6 +3464,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1273534846
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273534840}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1294233836
 GameObject:
   m_ObjectHideFlags: 0
@@ -2847,6 +3509,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 522258795}
+  - {fileID: 1474566635}
+  - {fileID: 1787642350}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2930,6 +3594,7 @@ GameObject:
   - component: {fileID: 1358270968}
   - component: {fileID: 1358270967}
   - component: {fileID: 1358270970}
+  - component: {fileID: 1358270971}
   m_Layer: 0
   m_Name: City 27
   m_TagString: DownCity
@@ -3029,6 +3694,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1358270971
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358270965}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1359576368
 GameObject:
   m_ObjectHideFlags: 0
@@ -3074,6 +3755,7 @@ GameObject:
   - component: {fileID: 1410140739}
   - component: {fileID: 1410140738}
   - component: {fileID: 1410140741}
+  - component: {fileID: 1410140742}
   m_Layer: 0
   m_Name: City 15
   m_TagString: RightCity
@@ -3173,6 +3855,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1410140742
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410140736}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1464614188
 GameObject:
   m_ObjectHideFlags: 0
@@ -3185,6 +3883,7 @@ GameObject:
   - component: {fileID: 1464614191}
   - component: {fileID: 1464614190}
   - component: {fileID: 1464614193}
+  - component: {fileID: 1464614194}
   m_Layer: 0
   m_Name: Start
   m_TagString: Houses
@@ -3284,6 +3983,90 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1464614194
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464614188}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!1 &1474566634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1474566635}
+  - component: {fileID: 1474566636}
+  - component: {fileID: 1474566637}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1474566635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474566634}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1294233837}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1474566636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474566634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 888
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &1474566637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474566634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f4cffb70257cd44e8d5b29d1822769f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawn: {fileID: 1787642350}
 --- !u!1 &1523929621
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,8 +4094,7 @@ Transform:
   m_LocalPosition: {x: -5.616251, y: 5.839323, z: 4.894614}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1866694698}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3328,6 +4110,7 @@ GameObject:
   - component: {fileID: 1595306204}
   - component: {fileID: 1595306203}
   - component: {fileID: 1595306206}
+  - component: {fileID: 1595306207}
   m_Layer: 0
   m_Name: City 1
   m_TagString: LeftCity
@@ -3427,6 +4210,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1595306207
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595306201}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1596305209
 GameObject:
   m_ObjectHideFlags: 0
@@ -3439,6 +4238,7 @@ GameObject:
   - component: {fileID: 1596305212}
   - component: {fileID: 1596305211}
   - component: {fileID: 1596305214}
+  - component: {fileID: 1596305215}
   m_Layer: 0
   m_Name: City 12
   m_TagString: UpCity
@@ -3538,6 +4338,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1596305215
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596305209}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1647787489
 GameObject:
   m_ObjectHideFlags: 0
@@ -3633,6 +4449,7 @@ GameObject:
   - component: {fileID: 1658547217}
   - component: {fileID: 1658547216}
   - component: {fileID: 1658547219}
+  - component: {fileID: 1658547220}
   m_Layer: 0
   m_Name: City 10
   m_TagString: UpCity
@@ -3732,6 +4549,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1658547220
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658547214}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1669231194
 GameObject:
   m_ObjectHideFlags: 0
@@ -3911,6 +4744,7 @@ GameObject:
   - component: {fileID: 1726374813}
   - component: {fileID: 1726374812}
   - component: {fileID: 1726374815}
+  - component: {fileID: 1726374816}
   m_Layer: 0
   m_Name: City 26
   m_TagString: DownCity
@@ -4010,6 +4844,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1726374816
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726374810}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1781552485
 GameObject:
   m_ObjectHideFlags: 0
@@ -4093,6 +4943,37 @@ Transform:
   m_Father: {fileID: 679372033}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1787642349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1787642350}
+  m_Layer: 0
+  m_Name: Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1787642350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787642349}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.22, y: -4.86, z: -17.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1294233837}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1835086649
 GameObject:
   m_ObjectHideFlags: 0
@@ -4105,6 +4986,7 @@ GameObject:
   - component: {fileID: 1835086652}
   - component: {fileID: 1835086651}
   - component: {fileID: 1835086654}
+  - component: {fileID: 1835086655}
   m_Layer: 0
   m_Name: City 5
   m_TagString: LeftCity
@@ -4204,6 +5086,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1835086655
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835086649}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1836518004
 GameObject:
   m_ObjectHideFlags: 0
@@ -4216,6 +5114,7 @@ GameObject:
   - component: {fileID: 1836518007}
   - component: {fileID: 1836518006}
   - component: {fileID: 1836518009}
+  - component: {fileID: 1836518010}
   m_Layer: 0
   m_Name: City 11
   m_TagString: UpCity
@@ -4315,6 +5214,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1836518010
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836518004}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1864733645
 GameObject:
   m_ObjectHideFlags: 0
@@ -4327,6 +5242,7 @@ GameObject:
   - component: {fileID: 1864733648}
   - component: {fileID: 1864733647}
   - component: {fileID: 1864733650}
+  - component: {fileID: 1864733651}
   m_Layer: 0
   m_Name: City 21
   m_TagString: RightCity
@@ -4426,136 +5342,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1866694694
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1866694698}
-  - component: {fileID: 1866694697}
-  - component: {fileID: 1866694696}
-  - component: {fileID: 1866694695}
-  - component: {fileID: 1866694702}
-  - component: {fileID: 1866694701}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!136 &1866694695
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1866694694}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1866694696
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1866694694}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1866694697
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1866694694}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1866694698
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1866694694}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.2437491, y: -4.719323, z: -17.464615}
-  m_LocalScale: {x: 1.0536535, y: 1.1455321, z: 1.0536535}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1523929622}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1866694701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1866694694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 503f3c3d2d30c394c8ee16bcf8adc59d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RandomNum: 0
-  _round: 0
-  _speed: 0
---- !u!54 &1866694702
+--- !u!54 &1864733651
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1866694694}
+  m_GameObject: {fileID: 1864733645}
   serializedVersion: 2
   m_Mass: 0.0000001
   m_Drag: 0
-  m_AngularDrag: 0
+  m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!1 &1945428396
 GameObject:
@@ -4569,6 +5370,7 @@ GameObject:
   - component: {fileID: 1945428399}
   - component: {fileID: 1945428398}
   - component: {fileID: 1945428401}
+  - component: {fileID: 1945428402}
   m_Layer: 0
   m_Name: City 25
   m_TagString: DownCity
@@ -4668,6 +5470,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1945428402
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945428396}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1963721075
 GameObject:
   m_ObjectHideFlags: 0
@@ -4680,6 +5498,7 @@ GameObject:
   - component: {fileID: 1963721078}
   - component: {fileID: 1963721077}
   - component: {fileID: 1963721080}
+  - component: {fileID: 1963721081}
   m_Layer: 0
   m_Name: City 22
   m_TagString: DownCity
@@ -4779,6 +5598,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1963721081
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963721075}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2062689906
 GameObject:
   m_ObjectHideFlags: 0
@@ -4791,6 +5626,7 @@ GameObject:
   - component: {fileID: 2062689909}
   - component: {fileID: 2062689908}
   - component: {fileID: 2062689911}
+  - component: {fileID: 2062689912}
   m_Layer: 0
   m_Name: City 17
   m_TagString: RightCity
@@ -4890,3 +5726,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2a0f1a710998d40ad0e1885fe363f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &2062689912
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062689906}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

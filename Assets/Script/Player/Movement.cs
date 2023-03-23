@@ -1,18 +1,20 @@
 using Photon.Pun;
+using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Android;
 
-public class Movement : MonoBehaviour
+public class Movement : MonoBehaviourPunCallbacks
 {
     private Vector3 direction;//Direção que o player vai seguir
     private Vector3 _currentPos;//posição atual do player
 
     private GameObject[] _cities;//Array que vai Armazenar todos os blocos do jogo
+    PhotonView photonview;//Componente que faz com que outros possam receber as minhas informações
 
-    private  int _cityIndex;//Essa variavel guarda um número aleatório
+    [SerializeField]private  int _cityIndex;//Essa variavel guarda um número aleatório
 
     //Essas variáveis verificam eu qual lado meu player está
     public bool _isRightOrLeft;
@@ -21,7 +23,32 @@ public class Movement : MonoBehaviour
     [SerializeField] private int _round = 0;//Round que o player tá
     [SerializeField] private float _speed;//Velocidade que o player se movimenta
 
-    [SerializeField] PhotonView photonview;//Componente que faz com que outros possam receber as minhas informações
+
+    private Player _photonPlayer;
+    public Player PhotonPlayer { get => _photonPlayer; private set => _photonPlayer = value; }
+    private int _id;
+
+    [PunRPC]
+    public void Initialize(Player player)
+    {
+        _photonPlayer = player;
+        _id = player.ActorNumber;
+
+        GameManager.Instance.Players.Add(player);
+
+        if (!photonview.IsMine)
+        {
+
+            return;
+
+        }
+    }
+
+    private void Awake()
+    {
+        photonview = GetComponent<PhotonView>();
+    }
+
 
     private void Start()
     {
@@ -63,13 +90,13 @@ public class Movement : MonoBehaviour
         };
 
         _cityIndex = 0;//_cityIndex sempre começará com 0, pois é o index do bloco "Start"
+        Debug.Log("Movement: " + _photonPlayer);
     }
 
 
     private void Update()
     { 
         Move();
-        Debug.Log(_cityIndex);
     }
 
     private void Move()
@@ -114,6 +141,7 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         //Se meu Player estiver nas cidades da direita ou esquerda, seu eixo x será o mesmo da cidade, porém - 1 
         if (other.gameObject.CompareTag("LeftCity") || other.gameObject.CompareTag("RightCity"))
         {
