@@ -64,8 +64,8 @@ public class Movement : MonoBehaviour
 
 
         //_currentPos recebe as coordenadas x e z de _cities[RandomNum] que no caso é a posição que o player deve ir
-        _currentPos = new Vector3(Random.Range(_cities[RandomNum].transform.position.x - 1, _cities[RandomNum].transform.position.x - 1),
-            transform.position.y, Random.Range(_cities[RandomNum].transform.position.z - 1, _cities[RandomNum].transform.position.z - 1));
+        _currentPos = new Vector3(_cities[RandomNum].transform.position.x, transform.position.y, _cities[RandomNum].transform.position.x);
+          
 
         // Se a poção do player for diferente de _currentPos, ele deve se mover pelo tabuleiro até que sua posiçãi seja igual a _currentPos
         if (transform.position != _currentPos)
