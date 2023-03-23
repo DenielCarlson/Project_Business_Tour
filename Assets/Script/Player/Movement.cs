@@ -64,7 +64,8 @@ public class Movement : MonoBehaviour
 
 
         //_currentPos recebe as coordenadas x e z de _cities[RandomNum] que no caso é a posição que o player deve ir
-        _currentPos = new Vector3(_cities[RandomNum].transform.position.x, transform.position.y, _cities[RandomNum].transform.position.z);
+        _currentPos = new Vector3(Random.Range(_cities[RandomNum].transform.position.x - 1, _cities[RandomNum].transform.position.x - 1),
+            transform.position.y, Random.Range(_cities[RandomNum].transform.position.z - 1, _cities[RandomNum].transform.position.z - 1));
 
         // Se a poção do player for diferente de _currentPos, ele deve se mover pelo tabuleiro até que sua posiçãi seja igual a _currentPos
         if (transform.position != _currentPos)
@@ -97,38 +98,42 @@ public class Movement : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        //Quando o player se colidir com algo, no caso as cidades, ele sempre ficará na mesma posição do eixo x, e z dessa mesma cidade
-        transform.position = new Vector3(other.gameObject.transform.position.x, transform.position.y, other.gameObject.transform.position.z);
-
-        //Se o player estiver colidindo com blocos da tag Houses que são as cidades o if se ativará
-        if (other.gameObject.CompareTag("Houses"))
+        if (other.gameObject.CompareTag("LeftCity") || other.gameObject.CompareTag("RightCity"))
         {
-
-            //se ele estiver no bloco Start, a direção do player é Subindo e roud é incrementado + 1
-            if (other.gameObject == GameObject.Find("Start"))
-            {
-                _round++;
-                direction = new Vector3(0, 0, 1 * Time.deltaTime * _speed);
-            }
-
-            //se ele estiver no bloco Lost Island, a direção do player é Direita
-            else if (other.gameObject == GameObject.Find("Lost Island"))
-            {
-                direction = new Vector3(1 * Time.deltaTime * _speed, 0, 0);
-            }
-
-            //se ele estiver no bloco World Championships, a direção do player é Descendo
-            else if (other.gameObject == GameObject.Find("World Championships"))
-            {
-                direction = new Vector3(0, 0, -1 * Time.deltaTime * _speed);
-            }
-
-            //se ele estiver no bloco World Tour, a direção do player é Esquerda
-            else if (other.gameObject == GameObject.Find("World Tour"))
-            {
-                direction = new Vector3(-1 * Time.deltaTime * _speed, 0, 0);
-            }
+            transform.position = new Vector3(other.gameObject.transform.position.x - 1, transform.position.y, other.gameObject.transform.position.z);
+        }else if (other.gameObject.CompareTag("UpCity") || other.gameObject.CompareTag("DownCity"))
+        {
+            transform.position = new Vector3(other.gameObject.transform.position.x, transform.position.y, other.gameObject.transform.position.z - 1);
+        }
+        else
+        {
+            transform.position = new Vector3(other.gameObject.transform.position.x, transform.position.y, other.gameObject.transform.position.z);
         }
 
+
+        //se ele estiver no bloco Start, a direção do player é Subindo e roud é incrementado + 1
+        if (other.gameObject == GameObject.Find("Start"))
+        {
+            _round++;
+            direction = Vector3.forward * Time.deltaTime * _speed;
+        }
+
+        //se ele estiver no bloco Lost Island, a direção do player é Direita
+        else if (other.gameObject == GameObject.Find("Lost Island"))
+        {
+            direction = Vector3.right * Time.deltaTime * _speed;
+        }
+
+        //se ele estiver no bloco World Championships, a direção do player é Descendo
+        else if (other.gameObject == GameObject.Find("World Championships"))
+        {
+            direction = Vector3.back * Time.deltaTime * _speed;
+        }
+
+        //se ele estiver no bloco World Tour, a direção do player é Esquerda
+        else if (other.gameObject == GameObject.Find("World Tour"))
+        {
+            direction = Vector3.left * Time.deltaTime * _speed;
+        }
     }
 }

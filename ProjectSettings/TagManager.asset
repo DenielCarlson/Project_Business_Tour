@@ -5,7 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Houses
-  - Dice
+  - LeftCity
+  - UpCity
+  - RightCity
+  - DownCity
   layers:
   - Default
   - TransparentFX
