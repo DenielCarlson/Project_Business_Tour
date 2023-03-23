@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -11,14 +12,20 @@ public class Movement : MonoBehaviour
 
     private GameObject[] _cities;//Array que vai Armazenar todos os blocos do jogo
 
-    public int RandomNum;//Essa variavel guarda um número aleatório
+    private  int _cityIndex;//Essa variavel guarda um número aleatório
+
+    //Essas variáveis verificam eu qual lado meu player está
+    public bool _isRightOrLeft;
+    public bool _isUpOrDown;
 
     [SerializeField] private int _round = 0;//Round que o player tá
     [SerializeField] private float _speed;//Velocidade que o player se movimenta
 
+    [SerializeField] PhotonView photonview;//Componente que faz com que outros possam receber as minhas informações
 
-    private void Start()//Aqui o array _cities é inicializado pegando todos os gameObjects, os blocos no caso
+    private void Start()
     {
+        //Aqui o array _cities é inicializado pegando todos os gameObjects, os blocos no caso
         _cities = new GameObject[]
         {
             GameObject.Find("Start"),
@@ -55,19 +62,32 @@ public class Movement : MonoBehaviour
             GameObject.Find("City 28"),
         };
 
-
+        _cityIndex = 0;//_cityIndex sempre começará com 0, pois é o index do bloco "Start"
     }
 
 
     private void Update()
+    { 
+        Move();
+        Debug.Log(_cityIndex);
+    }
+
+    private void Move()
     {
+        //De acordo com o lado do meu player, ele receberá diferentes posições - pode ser melhorado no futuro para não ficar tão fixo
+        if (_isRightOrLeft)
+        {
+            _currentPos = new Vector3(_cities[_cityIndex].transform.position.x - 1, transform.position.y, _cities[_cityIndex].transform.position.z);
+        }else if (_isUpOrDown)
+        {
+            _currentPos = new Vector3(_cities[_cityIndex].transform.position.x, transform.position.y, _cities[_cityIndex].transform.position.z - 1);
+        }
+        else
+        {  
+            _currentPos = new Vector3(_cities[_cityIndex].transform.position.x, transform.position.y, _cities[_cityIndex].transform.position.z);
+        }
 
-
-        //_currentPos recebe as coordenadas x e z de _cities[RandomNum] que no caso é a posição que o player deve ir
-        _currentPos = new Vector3(_cities[RandomNum].transform.position.x, transform.position.y, _cities[RandomNum].transform.position.x);
-          
-
-        // Se a poção do player for diferente de _currentPos, ele deve se mover pelo tabuleiro até que sua posiçãi seja igual a _currentPos
+        // Se a poção do player for diferente de _currentPos, ele deve se mover pelo tabuleiro até que sua posição seja igual a _currentPos
         if (transform.position != _currentPos)
         {
 
@@ -77,36 +97,45 @@ public class Movement : MonoBehaviour
         }
     }
 
-    public void RollDice()// esse método me retorna um número aleatório
+    public void CityIndex(int dice)//Esse método vai fazer com que _cityIndex receba o resultado do dado
     {
-        int dice = Random.Range(2, 12);// vai ser gerando um número aleatório entre 2 e 12
-        RandomNum += dice; //randomNum recebe esse númeto aleátorio + o seu próprio valor
+        _cityIndex += dice; //_cityIndex recebe esse númeto aleátorio + o seu próprio valor
 
         //Se randomNum for maior que 31, randomNum será ele menos 31, assim restando a diferença e completando a volta no tabuleiro
-        //Isso evita com que o RandomNum que serve de parâmetro para _cities[], não ultrapasse os limites do vetor
-        if (RandomNum > 31)
-
+        //Isso evita com que o  _cityIndex que serve de parâmetro para _cities[], não ultrapasse os limites do vetor
+        if (_cityIndex > 31)
         {
-            int deltaRandomNum = RandomNum - 31;
-            RandomNum = 0 + deltaRandomNum;
+            int deltaRandomNum = _cityIndex - 31;
+            _cityIndex = 0 + deltaRandomNum;
         }
     }
 
 
 
-
     private void OnTriggerEnter(Collider other)
     {
-
+        //Se meu Player estiver nas cidades da direita ou esquerda, seu eixo x será o mesmo da cidade, porém - 1 
         if (other.gameObject.CompareTag("LeftCity") || other.gameObject.CompareTag("RightCity"))
         {
+            _isRightOrLeft = true;
+            _isUpOrDown = false;
+
             transform.position = new Vector3(other.gameObject.transform.position.x - 1, transform.position.y, other.gameObject.transform.position.z);
-        }else if (other.gameObject.CompareTag("UpCity") || other.gameObject.CompareTag("DownCity"))
+        }
+
+        //Se meu Player estiver nas cidades de cima ou de baixo, seu eixo z será o mesmo da cidade, porém - 1 
+        else if (other.gameObject.CompareTag("UpCity") || other.gameObject.CompareTag("DownCity"))
         {
+            _isUpOrDown = true;
+            _isRightOrLeft = false;
             transform.position = new Vector3(other.gameObject.transform.position.x, transform.position.y, other.gameObject.transform.position.z - 1);
         }
+
+        //Se meu player não estiver nem nas cidade dos lados nem em cima ou em baixo, sua posição será a mesma da cidade onde ele se encontra
         else
         {
+            _isUpOrDown = false;
+            _isRightOrLeft = false;
             transform.position = new Vector3(other.gameObject.transform.position.x, transform.position.y, other.gameObject.transform.position.z);
         }
 
