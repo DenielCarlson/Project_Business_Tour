@@ -23,9 +23,10 @@ public class Movement : MonoBehaviourPunCallbacks
     [SerializeField] private int _round = 0;//Round que o player tá
     [SerializeField] private float _speed;//Velocidade que o player se movimenta
 
-
-    private Player _photonPlayer;
     public Player PhotonPlayer { get => _photonPlayer; private set => _photonPlayer = value; }
+    public int ID { get => _id; private set => _id = value; }
+   
+    private Player _photonPlayer;
     private int _id;
 
     [PunRPC]
@@ -35,6 +36,7 @@ public class Movement : MonoBehaviourPunCallbacks
         _id = player.ActorNumber;
 
         GameManager.Instance.Players.Add(player);
+        GameManager.Instance.PlayerObjects.Add(this.gameObject);
 
         if (!photonview.IsMine)
         {
@@ -90,7 +92,6 @@ public class Movement : MonoBehaviourPunCallbacks
         };
 
         _cityIndex = 0;//_cityIndex sempre começará com 0, pois é o index do bloco "Start"
-        Debug.Log("Movement: " + _photonPlayer);
     }
 
 

@@ -39,6 +39,12 @@ MonoBehaviour:
   - CreatePlayer
   - Initialize
   - StartGame
+  - IsCurrentPlayerTurn
+  - UpdateServerInfo
+  - NextTurn
+  - TurnSystem
+  - InteractableBtnRoll
+  - ListValidation
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

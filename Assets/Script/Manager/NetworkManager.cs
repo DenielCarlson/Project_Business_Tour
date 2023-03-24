@@ -7,14 +7,10 @@ using UnityEngine.UI;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
-    private PhotonView photonView;
-
     public Text ServerInfo;
 
     private void Awake()
     {
-
-        photonView = GetComponent<PhotonView>();
 
         PhotonNetwork.ConnectUsingSettings();
         PhotonNetwork.LocalPlayer.NickName = "DenielTeste";
@@ -59,13 +55,19 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         ServerInfo.text += "\nVocê entrou na sala";
         ServerInfo.text += "\nMeu id: " + PhotonNetwork.LocalPlayer;
-
-        GameManager.Instance.photonView.RPC("StartGame", RpcTarget.AllBuffered);
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         ServerInfo.text += "\nOutro jogador entou na sala, jogador nickname: " + newPlayer.NickName;
+
+
+        if (PhotonNetwork.IsMasterClient)
+        {
+
+            GameManager.Instance.photonView.RPC("CreatePlayer", RpcTarget.AllBuffered);
+
+        }
     }
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
