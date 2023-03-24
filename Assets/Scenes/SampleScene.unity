@@ -4068,7 +4068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawn: {fileID: 1787642350}
   _serverInfo: {fileID: 180964740}
-  btnRoll: {fileID: 1069168739}
+  _rollUI: {fileID: 795617411}
 --- !u!1 &1523929621
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     [SerializeField] private Transform _spawn;
     [SerializeField] private Text _serverInfo;
-    [SerializeField] private Button btnRoll;
+    [SerializeField] private GameObject _rollUI;
 
     void Awake()
     {
@@ -35,37 +35,31 @@ public class GameManager : MonoBehaviourPunCallbacks
         _playerObjects = new List<GameObject>();
         _playersInGame = 0;
         _currentPlayerTurnIndex = 0;
+        //_rollUI.SetActive(false);
 
     }
 
     private void Update()
     {
-
-        //photonView.RPC("InteractableBtnRoll", RpcTarget.All);
-
         _players.Sort((p1, p2) => p1.ActorNumber.CompareTo(p2.ActorNumber));
-
         photonView.RPC("ListValidation", RpcTarget.All, _players);
+
+        InteractableBtnRoll();
     }
 
     [PunRPC]
-    private void ListValidation<T>(List<T> list)
+    private void ListValidation<T>(ref List<T> list)
     {
-        if (list.Count > _playersInGame)
-        {
-            List<T> newListPlayer = list.Distinct().ToList();
-            list = newListPlayer;
-        }
+        List<T> newList = list.Distinct().ToList();
+
+        list = newList;
     }
 
     [PunRPC]
     void NextTurn()
     {
-        _serverInfo.text += "\nId" + _players[_currentPlayerTurnIndex].ActorNumber + ",  TurnCount: " + _turnCount + ", Players: " + _players.Count + ", CurrentPlayerNumber: " + _currentPlayerTurnIndex;
-
-        int idPlayer = _playerObjects[_currentPlayerTurnIndex].GetComponent<Movement>().ID;
-        _serverInfo.text += "\n" + idPlayer;
-       _turnCount++;
+        _serverInfo.text += "\nId" + _players[_currentPlayerTurnIndex].ActorNumber + ", CurrentPlayerNumber: " + _currentPlayerTurnIndex + ", Players: " + _players.Count;
+        _turnCount++;
         _currentPlayerTurnIndex = _turnCount % _players.Count;
     }
 
@@ -82,18 +76,18 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
     }
 
-    /*[PunRPC]
-     private void InteractableBtnRoll()
-     {
-         if (_players[_currentPlayerTurnIndex] == PhotonNetwork.LocalPlayer)
-         {
-             btnRoll.interactable = true;
-         }
-         else
-         {
-             btnRoll.interactable = false;
-         }
-     }*/
+    private void InteractableBtnRoll()
+    {
+
+        if (_players[_currentPlayerTurnIndex] == PhotonNetwork.LocalPlayer)
+        {
+            _rollUI.SetActive(true);
+        }
+        else
+        {
+            _rollUI.SetActive(false);
+        }
+    }
 
     [PunRPC]
     public void StartGame()

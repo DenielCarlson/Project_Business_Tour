@@ -7,11 +7,18 @@ using UnityEngine.UI;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
+    public static NetworkManager Instance;
     public Text ServerInfo;
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            return;
+        }
 
+        NetworkManager.Instance = this;
+        DontDestroyOnLoad(gameObject);
         PhotonNetwork.ConnectUsingSettings();
         PhotonNetwork.LocalPlayer.NickName = "DenielTeste";
         ServerInfo.text += "\nConectando no Server...";
@@ -44,7 +51,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
         if (returnCode == ErrorCode.GameDoesNotExist)
         {
-            RoomOptions roomOptions = new RoomOptions { MaxPlayers = 4 };
+            RoomOptions roomOptions = new RoomOptions { MaxPlayers = 2};
             PhotonNetwork.CreateRoom("ServerTeste", roomOptions);
             ServerInfo.text += "\nSala criada com sucesso";
 
@@ -61,13 +68,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         ServerInfo.text += "\nOutro jogador entou na sala, jogador nickname: " + newPlayer.NickName;
 
-
-        if (PhotonNetwork.IsMasterClient)
+        if (PhotonNetwork.PlayerList.Length == 3)
         {
-
-            GameManager.Instance.photonView.RPC("CreatePlayer", RpcTarget.AllBuffered);
-
+            if (PhotonNetwork.IsMasterClient)
+            {
+                GameManager.Instance.photonView.RPC("CreatePlayer", RpcTarget.AllBuffered);
+            }
         }
+
     }
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
