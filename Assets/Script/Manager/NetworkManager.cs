@@ -51,7 +51,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
         if (returnCode == ErrorCode.GameDoesNotExist)
         {
-            RoomOptions roomOptions = new RoomOptions { MaxPlayers = 2};
+            RoomOptions roomOptions = new RoomOptions { MaxPlayers = 4};
             PhotonNetwork.CreateRoom("ServerTeste", roomOptions);
             ServerInfo.text += "\nSala criada com sucesso";
 
@@ -62,19 +62,19 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         ServerInfo.text += "\nVocê entrou na sala";
         ServerInfo.text += "\nMeu id: " + PhotonNetwork.LocalPlayer;
-        //GameManager.Instance.photonView.RPC("CreatePlayer", RpcTarget.AllBuffered);
+        GameManager.Instance.photonView.RPC("CreatePlayer", RpcTarget.AllBuffered);
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         ServerInfo.text += "\nOutro jogador entou na sala, jogador nickname: " + newPlayer.NickName;
-        if (PhotonNetwork.PlayerList.Length == 2)
+        /*if (PhotonNetwork.PlayerList.Length == 2)
         {
             if (PhotonNetwork.IsMasterClient)
             {
                 GameManager.Instance.photonView.RPC("CreatePlayer", RpcTarget.AllBuffered);
             }
-        }
+        }*/
 
     }
 

@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Android;
 
-public class Movement : MonoBehaviourPunCallbacks
+public class PlayerScript : MonoBehaviourPunCallbacks
 {
     private Vector3 direction;//Direção que o player vai seguir
     private Vector3 _currentPos;//posição atual do player
@@ -14,7 +14,7 @@ public class Movement : MonoBehaviourPunCallbacks
     private GameObject[] _cities;//Array que vai Armazenar todos os blocos do jogo
     PhotonView photonview;//Componente que faz com que outros possam receber as minhas informações
 
-    [SerializeField]private  int _cityIndex;//Essa variavel guarda um número aleatório
+    [SerializeField] private int _cityIndex;//Essa variavel guarda um número aleatório
 
     //Essas variáveis verificam eu qual lado meu player está
     public bool _isRightOrLeft;
@@ -25,7 +25,7 @@ public class Movement : MonoBehaviourPunCallbacks
 
     public Player PhotonPlayer { get => _photonPlayer; private set => _photonPlayer = value; }
     public int ID { get => _id; private set => _id = value; }
-   
+
     private Player _photonPlayer;
     private int _id;
 
@@ -37,13 +37,6 @@ public class Movement : MonoBehaviourPunCallbacks
 
         GameManager.Instance.Players.Add(player);
         GameManager.Instance.PlayerObjects.Add(gameObject);
-
-        if (!photonview.IsMine)
-        {
-
-            return;
-
-        }
     }
 
     private void Awake()
@@ -96,8 +89,11 @@ public class Movement : MonoBehaviourPunCallbacks
 
 
     private void Update()
-    { 
-        Move();
+    {
+        if (photonView.IsMine)
+        {
+            Move();
+        }
     }
 
     private void Move()
@@ -106,12 +102,13 @@ public class Movement : MonoBehaviourPunCallbacks
         if (_isRightOrLeft)
         {
             _currentPos = new Vector3(_cities[_cityIndex].transform.position.x - 1, transform.position.y, _cities[_cityIndex].transform.position.z);
-        }else if (_isUpOrDown)
+        }
+        else if (_isUpOrDown)
         {
             _currentPos = new Vector3(_cities[_cityIndex].transform.position.x, transform.position.y, _cities[_cityIndex].transform.position.z - 1);
         }
         else
-        {  
+        {
             _currentPos = new Vector3(_cities[_cityIndex].transform.position.x, transform.position.y, _cities[_cityIndex].transform.position.z);
         }
 
@@ -195,3 +192,4 @@ public class Movement : MonoBehaviourPunCallbacks
         }
     }
 }
+

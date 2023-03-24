@@ -10,17 +10,25 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviourPunCallbacks
 {
     public static GameManager Instance { get; private set; }
+
+    //Lista pública com todos os jogadores na sala
     public List<Player> Players { get => _players; private set => _players = value; }
+    //Lista pública com todos os objetos de jogares no tabuleiro
     public List<GameObject> PlayerObjects { get => _playerObjects; private set => _playerObjects = value; }
 
     private List<Player> _players;
     private List<GameObject> _playerObjects;
 
+    //Index que mudará a cada turno pecorrendo a lista de jogadores e decidindo de quem será o turno atual
     private int _currentPlayerTurnIndex;
+    //Número que é aumentado a cada turno, necessário para decidir o jogador seguinte
     private int _turnCount;
 
+    //spawn dos objetos de jogadores
     [SerializeField] private Transform _spawn;
+    //informações na tela - isso será temporário
     [SerializeField] private Text _serverInfo;
+    //canvas que é ativado quando o turno atual é do player local e desativado quando não é
     [SerializeField] private GameObject _rollUI;
 
     void Awake()
@@ -41,10 +49,13 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     private void Update()
     {
+        //Organiza a lista em ordem de entrada para todos os jogadores
         _players.Sort((p1, p2) => p1.ActorNumber.CompareTo(p2.ActorNumber));
         TurnSystem();
     }
 
+
+    //Soma +1 na variavel _turnCount e passa para o próximo turno
     [PunRPC]
     void NextTurn()
     {
@@ -52,12 +63,14 @@ public class GameManager : MonoBehaviourPunCallbacks
         _currentPlayerTurnIndex = _turnCount % _players.Count;
     }
 
+    //Retorna se é a vez do seu jogador ou não
     private bool IsCurrentPlayerTurn()
     {
         return _players[_currentPlayerTurnIndex] == PhotonNetwork.LocalPlayer;
     }
 
 
+    //Método que é atrelado ao btnRoll, que faz o player jogar os dados e passar o turno
     public void OnRollDiceClick()
     {
         if (_currentPlayerTurnIndex == 0)
@@ -72,20 +85,21 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
     }
 
+    //Lógica dos dados, onde o player atual jogar os dados e faz o playerObj se movimentar no tabuleiro
     void OnRolledDice()
     {
         GameObject currentPlayerTurn = null;
 
         foreach(var obj in _playerObjects)
         {
-            if (_players[_currentPlayerTurnIndex] == obj.GetComponent<Movement>().PhotonPlayer)
+            if (_players[_currentPlayerTurnIndex] == obj.GetComponent<PlayerScript>().PhotonPlayer)
             {
                 currentPlayerTurn = obj;
             }
         }
 
         int dice = Random.Range(2, 13);
-        currentPlayerTurn.GetComponent<Movement>().CityIndex(dice);
+        currentPlayerTurn.GetComponent<PlayerScript>().CityIndex(dice);
     }
 
     //Ativa ou desativa o Button "Roll" de acordo com o Turno do personagem
@@ -108,7 +122,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     public void CreatePlayer()
     {
         GameObject myPlayerObject = PhotonNetwork.Instantiate("Player", _spawn.position, Quaternion.identity);
-        var myPlayerMovement = myPlayerObject.GetComponent<Movement>();
+        var myPlayerMovement = myPlayerObject.GetComponent<PlayerScript>();
         myPlayerMovement.photonView.RPC("Initialize", RpcTarget.All, PhotonNetwork.LocalPlayer);
 
     }
