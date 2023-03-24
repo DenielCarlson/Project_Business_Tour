@@ -36,7 +36,7 @@ public class Movement : MonoBehaviourPunCallbacks
         _id = player.ActorNumber;
 
         GameManager.Instance.Players.Add(player);
-        GameManager.Instance.PlayerObjects.Add(this.gameObject);
+        GameManager.Instance.PlayerObjects.Add(gameObject);
 
         if (!photonview.IsMine)
         {
