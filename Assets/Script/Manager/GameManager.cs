@@ -3,6 +3,7 @@ using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,23 +32,43 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
 
         Instance = this;
+
         _players = new List<Player>();
         _playerObjects = new List<GameObject>();
         _playersInGame = 0;
         _currentPlayerTurnIndex = 0;
-        //_rollUI.SetActive(false);
+        _rollUI.SetActive(false);
 
     }
 
     private void Update()
     {
+        OrganizeListWithPhotonID(ref _playerObjects);
         _players.Sort((p1, p2) => p1.ActorNumber.CompareTo(p2.ActorNumber));
-        photonView.RPC("ListValidation", RpcTarget.All, _players);
+        ListValidation(ref _players);
+        ListValidation(ref _playerObjects);
 
-        InteractableBtnRoll();
+        TurnSystem();
     }
 
-    [PunRPC]
+    private void OrganizeListWithPhotonID(ref List<GameObject> list)
+    {
+        List<PhotonView> toOrganize = new List<PhotonView>();
+
+        for (int i = 0; i < list.Count; i++)
+        {
+            toOrganize.Add(list[i].GetComponent<PhotonView>());
+        }
+
+        toOrganize.Sort((x1, x2) => x1.ViewID.CompareTo(x2.ViewID));
+
+        for (int i = 0; i < list.Count; i++)
+        {
+            list[i] = toOrganize[i].gameObject;
+        }
+
+    }
+
     private void ListValidation<T>(ref List<T> list)
     {
         List<T> newList = list.Distinct().ToList();
@@ -58,9 +79,14 @@ public class GameManager : MonoBehaviourPunCallbacks
     [PunRPC]
     void NextTurn()
     {
-        _serverInfo.text += "\nId" + _players[_currentPlayerTurnIndex].ActorNumber + ", CurrentPlayerNumber: " + _currentPlayerTurnIndex + ", Players: " + _players.Count;
+        _serverInfo.text += "\nId" + _players[_currentPlayerTurnIndex].ActorNumber + ", CurrentPlayerNumber: " + _currentPlayerTurnIndex + ", Players: " + _players.Count + ", PlayersInGame: " + _playersInGame;
         _turnCount++;
         _currentPlayerTurnIndex = _turnCount % _players.Count;
+    }
+
+    private bool IsCurrentPlayerTurn()
+    {
+        return _players[_currentPlayerTurnIndex] == PhotonNetwork.LocalPlayer;
     }
 
 
@@ -68,6 +94,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     {
         if (_currentPlayerTurnIndex == 0)
         {
+            photonView.RPC("OnRolledDice", RpcTarget.All);
             photonView.RPC("NextTurn", RpcTarget.All);
         }
         else
@@ -76,29 +103,45 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
     }
 
-    private void InteractableBtnRoll()
+    private void TurnSystem()
     {
 
-        if (_players[_currentPlayerTurnIndex] == PhotonNetwork.LocalPlayer)
+        if (IsCurrentPlayerTurn())
         {
             _rollUI.SetActive(true);
         }
+        else 
+        {
+           _rollUI.SetActive(false);
+        }
+
+    }
+    [PunRPC]
+    void OnRolledDice()
+    {
+        GameObject player = _playerObjects[_currentPlayerTurnIndex];
+        int dice = 0;
+
+        if (_players[_currentPlayerTurnIndex].ActorNumber == player.GetComponent<Movement>().ID)
+        {
+            Debug.Log("encontrou meu player");
+            Debug.Log(_players[_currentPlayerTurnIndex] + ", " + player.GetComponent<Movement>().ID);
+            Random.Range(2, 13);
+            player.GetComponent<Movement>().CityIndex(dice);
+        }
         else
         {
-            _rollUI.SetActive(false);
+            Debug.Log("não encontrou meu player");
+            Debug.Log(_players[_currentPlayerTurnIndex] + ", " + player.GetComponent<Movement>().ID);
         }
     }
 
-    [PunRPC]
-    public void StartGame()
-    {
-        _playersInGame++;
-    }
-
+    //Método responsável por criar o player
     [PunRPC]
     public void CreatePlayer()
     {
         GameObject myPlayerObject = PhotonNetwork.Instantiate("Player", _spawn.position, Quaternion.identity);
+        myPlayerObject.name = "Player " + _playersInGame;
         var myPlayerMovement = myPlayerObject.GetComponent<Movement>();
         myPlayerMovement.photonView.RPC("Initialize", RpcTarget.All, PhotonNetwork.LocalPlayer);
 
