@@ -116,7 +116,7 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 2
+  Synchronization: 1
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
@@ -156,4 +156,4 @@ MonoBehaviour:
   _isRightOrLeft: 0
   _isUpOrDown: 0
   _round: 0
-  _speed: 1
+  _speed: 3

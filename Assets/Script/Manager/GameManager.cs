@@ -41,43 +41,15 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        //OrganizeListWithPhotonID(ref _playerObjects);
         _players.Sort((p1, p2) => p1.ActorNumber.CompareTo(p2.ActorNumber));
-        //ListValidation(ref _players);
-        //ListValidation(ref _playerObjects);
         TurnSystem();
-    }
-
-    private void OrganizeListWithPhotonID(ref List<GameObject> list)
-    {
-        List<PhotonView> toOrganize = new List<PhotonView>();
-
-        for (int i = 0; i < list.Count; i++)
-        {
-            toOrganize.Add(list[i].GetComponent<PhotonView>());
-        }
-
-        toOrganize.Sort((x1, x2) => x1.ViewID.CompareTo(x2.ViewID));
-
-        for (int i = 0; i < list.Count; i++)
-        {
-            list[i] = toOrganize[i].gameObject;
-        }
-
-    }
-
-    private void ListValidation<T>(ref List<T> list)
-    {
-        List<T> newList = list.Distinct().ToList();
-
-        list = newList;
     }
 
     [PunRPC]
     void NextTurn()
     {
-        _currentPlayerTurnIndex = _turnCount % _players.Count;
         _turnCount++;
+        _currentPlayerTurnIndex = _turnCount % _players.Count;
     }
 
     private bool IsCurrentPlayerTurn()
