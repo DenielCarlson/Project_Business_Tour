@@ -8,13 +8,14 @@ using UnityEngine.Android;
 
 public class PlayerScript : MonoBehaviourPunCallbacks
 {
+    public GameObject[] Cities { get => _cities; private set => _cities = value; }
+    public int CityIndexVar { get => _cityIndex; private set => _cityIndex = value; }
+    private GameObject[] _cities;//Array que vai Armazenar todos os blocos do jogo
+
     private Vector3 direction;//Direção que o player vai seguir
     private Vector3 _currentPos;//posição atual do player
-
-    private GameObject[] _cities;//Array que vai Armazenar todos os blocos do jogo
     PhotonView photonview;//Componente que faz com que outros possam receber as minhas informações
 
-    [SerializeField] private int _cityIndex;//Essa variavel guarda um número aleatório
 
     //Essas variáveis verificam eu qual lado meu player está
     public bool _isRightOrLeft;
@@ -22,6 +23,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
 
     [SerializeField] private int _round = 0;//Round que o player tá
     [SerializeField] private float _speed;//Velocidade que o player se movimenta
+    [SerializeField] private int _cityIndex;//Essa variavel guarda um número aleatório
 
     public Player PhotonPlayer { get => _photonPlayer; private set => _photonPlayer = value; }
     public int ID { get => _id; private set => _id = value; }

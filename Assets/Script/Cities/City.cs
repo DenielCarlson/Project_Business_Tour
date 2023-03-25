@@ -5,64 +5,45 @@ using UnityEngine.UI;
 
 public class City : MonoBehaviour
 {
-    private GameObject player;
+    public int IdCity;
+    public bool HasPlayer;
+    public bool WasBought;
+    public float InitialPrice;
+    public float RentPrice { get; private set; }
 
-    private float _rentPrice;
+    public GameObject Player { get; set; }
+
     private int _levelCity;
 
     private int _idOwner;
     private bool _isOwn;
 
-    [SerializeField] private float _initialPrice;
     [SerializeField] private Transform spawn;
-    [SerializeField] private GameObject _uiCity;
-    [SerializeField] private GameObject _buildHouse;
+    [SerializeField] private GameObject _uiBuyCity;
 
     private void Awake()
     {
-        _uiCity.SetActive(false);
-        _buildHouse.SetActive(false);
-        _isOwn = false;
-        _levelCity = 0;
+        _uiBuyCity.SetActive(false);
     }
 
-    public void OnBuyClick()
+    void EnableUIBuyHouse()
     {
-        if (player.GetComponent<PlayerWallet>().Money > _initialPrice)
-        {
-            player.GetComponent<PlayerWallet>().Withdraw(_initialPrice);
-
-            _idOwner = player.GetComponent<PlayerScript>().ID;
-            _isOwn = true;
-            _uiCity.SetActive(false);
-            _buildHouse.SetActive(true);
-        }
-        else
-        {
-
-        }
-    }
-
-    public void OnBuildHouseOneClick()
-    {
-        _buildHouse.SetActive(false);
-
-        GameObject house = Resources.Load("HouseLevel1") as GameObject;
-        Instantiate(house, spawn.position, Quaternion.identity);
+        _uiBuyCity.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            player = other.gameObject;
-
-            Invoke("EnableUI", 0.5f);
+            HasPlayer = true;
+            Player = other.gameObject;
+            Invoke("EnableUIBuyHouse", 0.8f);
         }
     }
 
-    void EnableUI()
+    private void OnTriggerExit(Collider other)
     {
-        _uiCity.SetActive(true);
+        HasPlayer = false;
+        Player = null;
     }
 }

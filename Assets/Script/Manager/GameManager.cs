@@ -31,6 +31,13 @@ public class GameManager : MonoBehaviourPunCallbacks
     //canvas que é ativado quando o turno atual é do player local e desativado quando não é
     [SerializeField] private GameObject _rollUI;
 
+
+    //Var responsável pelas cidades
+    private GameObject currentPlayer;
+    private GameObject currentCity;
+    [SerializeField] private GameObject _uiBuyCity;
+    [SerializeField] private GameObject _uiBuildHouse;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -44,6 +51,10 @@ public class GameManager : MonoBehaviourPunCallbacks
         _playerObjects = new List<GameObject>();
         _currentPlayerTurnIndex = 0;
         _rollUI.SetActive(false);
+
+        //-----------------------------------
+        currentCity = null;
+        currentPlayer = null;
 
     }
 
@@ -125,5 +136,42 @@ public class GameManager : MonoBehaviourPunCallbacks
         var myPlayerMovement = myPlayerObject.GetComponent<PlayerScript>();
         myPlayerMovement.photonView.RPC("Initialize", RpcTarget.All, PhotonNetwork.LocalPlayer);
 
+    }
+
+
+    //Manager das cidade
+
+    public void OnBuyCityClick()
+    {
+        if (IsCurrentPlayerTurn())
+        {
+            foreach (var obj in _playerObjects) 
+            {
+                if (obj.GetComponent<PlayerScript>().ID == _players[_currentPlayerTurnIndex].ActorNumber)
+                {
+                    currentPlayer = obj;
+                    currentCity = obj.GetComponent<PlayerScript>().Cities[obj.GetComponent<PlayerScript>().CityIndexVar];
+                }
+            }
+
+            if (currentCity.GetComponent<City>().HasPlayer && currentCity.GetComponent<City>().WasBought == false)
+            {
+                currentCity.GetComponent<City>().Player = currentPlayer;
+
+                if (currentPlayer.GetComponent<PlayerWallet>().Money > currentCity.GetComponent<City>().InitialPrice)
+                {
+                    currentPlayer.GetComponent<PlayerWallet>().Withdraw(currentCity.GetComponent<City>().InitialPrice);
+                }
+
+            }
+            else if(currentCity.GetComponent<City>().HasPlayer == false && currentCity.GetComponent<City>().WasBought == false)
+            {
+                if (currentPlayer.GetComponent<PlayerWallet>().Money > currentCity.GetComponent<City>().InitialPrice)
+                {
+                    currentPlayer.GetComponent<PlayerWallet>().Withdraw(currentCity.GetComponent<City>().InitialPrice);
+                    _uiBuildHouse.SetActive(true);
+                }
+            }
+        }
     }
 }
