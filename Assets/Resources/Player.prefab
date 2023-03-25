@@ -153,11 +153,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503f3c3d2d30c394c8ee16bcf8adc59d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cityIndex: 0
   _isRightOrLeft: 0
   _isUpOrDown: 0
   _round: 0
   _speed: 2.5
+  _cityIndex: 0
+  MyCities: []
 --- !u!114 &6775261095617961165
 MonoBehaviour:
   m_ObjectHideFlags: 0

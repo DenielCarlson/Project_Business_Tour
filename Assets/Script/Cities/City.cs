@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class City : MonoBehaviour
 {
     public int IdCity;
+    public int IdOwner;
     public bool HasPlayer;
     public bool WasBought;
     public float InitialPrice;
@@ -14,11 +15,9 @@ public class City : MonoBehaviour
     public GameObject Player { get; set; }
 
     private int _levelCity;
-
-    private int _idOwner;
     private bool _isOwn;
 
-    [SerializeField] private Transform spawn;
+    [SerializeField] private Transform _spawn;
     [SerializeField] private GameObject _uiBuyCity;
 
     private void Awake()
@@ -26,9 +25,24 @@ public class City : MonoBehaviour
         _uiBuyCity.SetActive(false);
     }
 
+    private void Update()
+    {
+        if (IdOwner > 0)
+        {
+            _isOwn = true;
+            WasBought = true;
+        }
+    }
+
     void EnableUIBuyHouse()
     {
         _uiBuyCity.SetActive(true);
+    }
+
+    public void BuildHouse()
+    {
+        GameObject house = Resources.Load("HouseLevel1") as GameObject;
+        Instantiate(house, _spawn.position, Quaternion.identity);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -37,7 +51,7 @@ public class City : MonoBehaviour
         {
             HasPlayer = true;
             Player = other.gameObject;
-            Invoke("EnableUIBuyHouse", 0.8f);
+            Invoke("EnableUIBuyHouse", 0.5f);
         }
     }
 

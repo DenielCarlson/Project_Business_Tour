@@ -161,6 +161,11 @@ public class GameManager : MonoBehaviourPunCallbacks
                 if (currentPlayer.GetComponent<PlayerWallet>().Money > currentCity.GetComponent<City>().InitialPrice)
                 {
                     currentPlayer.GetComponent<PlayerWallet>().Withdraw(currentCity.GetComponent<City>().InitialPrice);
+                    currentCity.GetComponent<City>().IdOwner = currentPlayer.GetComponent<PlayerScript>().ID;
+                    currentPlayer.GetComponent<PlayerScript>().MyCities.Add(currentCity);
+
+                    _uiBuyCity.SetActive(false);
+                    _uiBuildHouse.SetActive(true);
                 }
 
             }
@@ -169,9 +174,26 @@ public class GameManager : MonoBehaviourPunCallbacks
                 if (currentPlayer.GetComponent<PlayerWallet>().Money > currentCity.GetComponent<City>().InitialPrice)
                 {
                     currentPlayer.GetComponent<PlayerWallet>().Withdraw(currentCity.GetComponent<City>().InitialPrice);
+                    currentCity.GetComponent<City>().IdOwner = currentPlayer.GetComponent<PlayerScript>().ID;
+                    currentPlayer.GetComponent<PlayerScript>().MyCities.Add(currentCity);
+
+                    _uiBuyCity.SetActive(false);
                     _uiBuildHouse.SetActive(true);
                 }
             }
         }
+    }
+
+
+    public void OnBuildHouseLvlOneClick()
+    {
+        if (currentPlayer.GetComponent<PlayerScript>().ID == currentCity.GetComponent<City>().IdOwner)
+        {
+            Debug.Log("Entrou");
+            currentPlayer.GetComponent<PlayerWallet>().Withdraw(200);
+            currentCity.GetComponent<City>().BuildHouse();
+        }
+        Debug.Log("Não entrou");
+        _uiBuildHouse.SetActive(false);
     }
 }

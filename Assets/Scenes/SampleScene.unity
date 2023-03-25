@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 18684797}
   - component: {fileID: 18684800}
   - component: {fileID: 18684801}
-  - component: {fileID: 18684802}
   m_Layer: 0
   m_Name: City 4
   m_TagString: LeftCity
@@ -253,22 +252,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &18684802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18684795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _initialPrice: 0
-  spawn: {fileID: 0}
-  _uiCity: {fileID: 0}
-  _buildHouse: {fileID: 0}
 --- !u!1 &30331688
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +348,6 @@ GameObject:
   - component: {fileID: 45448602}
   - component: {fileID: 45448605}
   - component: {fileID: 45448606}
-  - component: {fileID: 45448607}
   m_Layer: 0
   m_Name: City 7
   m_TagString: LeftCity
@@ -482,22 +464,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &45448607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 45448600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _initialPrice: 0
-  spawn: {fileID: 0}
-  _uiCity: {fileID: 0}
-  _buildHouse: {fileID: 0}
 --- !u!1 &113574558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,7 +1056,6 @@ GameObject:
   - component: {fileID: 463821682}
   - component: {fileID: 463821685}
   - component: {fileID: 463821686}
-  - component: {fileID: 463821687}
   m_Layer: 0
   m_Name: City 6
   m_TagString: LeftCity
@@ -1207,22 +1172,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &463821687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 463821680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _initialPrice: 0
-  spawn: {fileID: 0}
-  _uiCity: {fileID: 0}
-  _buildHouse: {fileID: 0}
 --- !u!1 &477448036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,10 +1902,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialPrice: 100
-  spawn: {fileID: 477448037}
-  _uiCity: {fileID: 1004090727}
-  _buildHouse: {fileID: 180611723}
+  IdCity: 2
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 100
+  _spawn: {fileID: 477448037}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &795617411
 GameObject:
   m_ObjectHideFlags: 0
@@ -2328,10 +2280,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialPrice: 0
-  spawn: {fileID: 0}
-  _uiCity: {fileID: 0}
-  _buildHouse: {fileID: 0}
+  IdCity: 0
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 0
+  _spawn: {fileID: 0}
+  _uiBuyCity: {fileID: 0}
 --- !u!1 &891441354
 GameObject:
   m_ObjectHideFlags: 0
@@ -4538,6 +4493,8 @@ MonoBehaviour:
   _spawn: {fileID: 1787642350}
   _serverInfo: {fileID: 180964740}
   _rollUI: {fileID: 795617411}
+  _uiBuyCity: {fileID: 1004090727}
+  _uiBuildHouse: {fileID: 180611723}
 --- !u!1 &1485689299
 GameObject:
   m_ObjectHideFlags: 0
@@ -4751,7 +4708,6 @@ GameObject:
   - component: {fileID: 1595306203}
   - component: {fileID: 1595306206}
   - component: {fileID: 1595306207}
-  - component: {fileID: 1595306209}
   m_Layer: 0
   m_Name: City 1
   m_TagString: LeftCity
@@ -4868,22 +4824,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1595306209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595306201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _initialPrice: 0
-  spawn: {fileID: 0}
-  _uiCity: {fileID: 0}
-  _buildHouse: {fileID: 0}
 --- !u!1 &1596305209
 GameObject:
   m_ObjectHideFlags: 0
@@ -5505,21 +5445,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 758661228}
-        m_TargetAssemblyTypeName: City, Assembly-CSharp
-        m_MethodName: OnBuildHouseOneClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 875931544}
-        m_TargetAssemblyTypeName: City, Assembly-CSharp
-        m_MethodName: OnBuildHouseOneClick
+      - m_Target: {fileID: 1474566637}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnBuildHouseLvlOneClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5822,7 +5750,6 @@ GameObject:
   - component: {fileID: 1835086651}
   - component: {fileID: 1835086654}
   - component: {fileID: 1835086655}
-  - component: {fileID: 1835086656}
   m_Layer: 0
   m_Name: City 5
   m_TagString: LeftCity
@@ -5939,22 +5866,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1835086656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1835086649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _initialPrice: 0
-  spawn: {fileID: 0}
-  _uiCity: {fileID: 0}
-  _buildHouse: {fileID: 0}
 --- !u!1 &1836518004
 GameObject:
   m_ObjectHideFlags: 0
@@ -6167,81 +6078,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1595306209}
-        m_TargetAssemblyTypeName: City, Assembly-CSharp
-        m_MethodName: OnBuyClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 758661228}
-        m_TargetAssemblyTypeName: City, Assembly-CSharp
-        m_MethodName: OnBuyClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 875931544}
-        m_TargetAssemblyTypeName: City, Assembly-CSharp
-        m_MethodName: OnBuyClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 18684802}
-        m_TargetAssemblyTypeName: City, Assembly-CSharp
-        m_MethodName: OnBuyClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1835086656}
-        m_TargetAssemblyTypeName: City, Assembly-CSharp
-        m_MethodName: OnBuyClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 463821687}
-        m_TargetAssemblyTypeName: City, Assembly-CSharp
-        m_MethodName: OnBuyClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 45448607}
-        m_TargetAssemblyTypeName: City, Assembly-CSharp
-        m_MethodName: OnBuyClick
+      - m_Target: {fileID: 1474566637}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnBuyCityClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

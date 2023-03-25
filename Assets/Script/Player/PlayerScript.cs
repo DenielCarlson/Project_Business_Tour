@@ -31,6 +31,8 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     private Player _photonPlayer;
     private int _id;
 
+    public List<GameObject> MyCities;
+
     [PunRPC]
     public void Initialize(Player player)
     {
@@ -44,6 +46,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     private void Awake()
     {
         photonview = GetComponent<PhotonView>();
+        MyCities = new List<GameObject>();
     }
 
 
