@@ -14,6 +14,7 @@ public class City : MonoBehaviour
 
     public GameObject Player { get; set; }
 
+
     private int _levelCity;
     private bool _isOwn;
 
@@ -49,9 +50,13 @@ public class City : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            HasPlayer = true;
             Player = other.gameObject;
-            Invoke("EnableUIBuyHouse", 0.5f);
+            if (Player.GetComponent<PlayerScript>().RecipientIdCity == this.IdCity) 
+            {
+                HasPlayer = true;
+                Player = other.gameObject;
+                Invoke("EnableUIBuyHouse", 0.5f);
+            }
         }
     }
 

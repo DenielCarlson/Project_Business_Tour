@@ -10,12 +10,14 @@ public class PlayerScript : MonoBehaviourPunCallbacks
 {
     public GameObject[] Cities { get => _cities; private set => _cities = value; }
     public int CityIndexVar { get => _cityIndex; private set => _cityIndex = value; }
+    
     private GameObject[] _cities;//Array que vai Armazenar todos os blocos do jogo
 
     private Vector3 direction;//Direção que o player vai seguir
     private Vector3 _currentPos;//posição atual do player
     PhotonView photonview;//Componente que faz com que outros possam receber as minhas informações
 
+    public int RecipientIdCity { get; private set; }
 
     //Essas variáveis verificam eu qual lado meu player está
     public bool _isRightOrLeft;
@@ -98,6 +100,8 @@ public class PlayerScript : MonoBehaviourPunCallbacks
         if (photonView.IsMine)
         {
             Move();
+            RecipientIdCity = _cities[_cityIndex].GetComponent<City>().IdCity;
+            
         }
     }
 

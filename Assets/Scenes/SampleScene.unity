@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 18684797}
   - component: {fileID: 18684800}
   - component: {fileID: 18684801}
+  - component: {fileID: 18684802}
   m_Layer: 0
   m_Name: City 4
   m_TagString: LeftCity
@@ -252,6 +253,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &18684802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18684795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 4
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 200
+  _spawn: {fileID: 1540908494}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &30331688
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +368,7 @@ GameObject:
   - component: {fileID: 45448602}
   - component: {fileID: 45448605}
   - component: {fileID: 45448606}
+  - component: {fileID: 45448607}
   m_Layer: 0
   m_Name: City 7
   m_TagString: LeftCity
@@ -464,6 +485,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &45448607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45448600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 7
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 100
+  _spawn: {fileID: 1582692240}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &113574558
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,6 +517,7 @@ GameObject:
   - component: {fileID: 113574560}
   - component: {fileID: 113574563}
   - component: {fileID: 113574564}
+  - component: {fileID: 113574565}
   m_Layer: 0
   m_Name: City 20
   m_TagString: RightCity
@@ -560,7 +601,8 @@ Transform:
   m_LocalPosition: {x: 11.820275, y: 26.231634, z: -2.33039}
   m_LocalScale: {x: 3, y: 1.5000001, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 183050667}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -592,6 +634,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &113574565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113574558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 20
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 560
+  _spawn: {fileID: 183050667}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &180611723
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,6 +976,68 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &183050666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 183050667}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &183050667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183050666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 113574562}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &223447253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 223447254}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &223447254
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223447253}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1235486118}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &245958439
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,6 +1051,7 @@ GameObject:
   - component: {fileID: 245958441}
   - component: {fileID: 245958444}
   - component: {fileID: 245958445}
+  - component: {fileID: 245958446}
   m_Layer: 0
   m_Name: City 28
   m_TagString: DownCity
@@ -1011,7 +1135,8 @@ Transform:
   m_LocalPosition: {x: -0.1297245, y: 26.231634, z: -6.28039}
   m_LocalScale: {x: 3, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 419199685}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
@@ -1043,6 +1168,56 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &245958446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245958439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 28
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 520
+  _spawn: {fileID: 419199685}
+  _uiBuyCity: {fileID: 1004090727}
+--- !u!1 &419199684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 419199685}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &419199685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419199684}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 245958443}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &463821680
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,6 +1231,7 @@ GameObject:
   - component: {fileID: 463821682}
   - component: {fileID: 463821685}
   - component: {fileID: 463821686}
+  - component: {fileID: 463821687}
   m_Layer: 0
   m_Name: City 6
   m_TagString: LeftCity
@@ -1172,6 +1348,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &463821687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463821680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 6
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 80
+  _spawn: {fileID: 1485689300}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &477448036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,7 +1377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 477448037}
   m_Layer: 0
-  m_Name: SpawnHouseLevel1
+  m_Name: SpawnHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1331,6 +1526,68 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &483847396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 483847397}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &483847397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483847396}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1084561736}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &483881942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 483881943}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &483881943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483881942}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1054969903}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &522258794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,6 +1656,68 @@ MonoBehaviour:
   sceneViewId: 999
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!1 &532822606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 532822607}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &532822607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532822606}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2062689910}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &548713235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 548713236}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &548713236
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548713235}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1273534844}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &557631742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,7 +1760,7 @@ GameObject:
   m_Component:
   - component: {fileID: 576468397}
   m_Layer: 0
-  m_Name: SpawnHouseLevel1
+  m_Name: SpawnHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1462,6 +1781,37 @@ Transform:
   m_Father: {fileID: 1835086653}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &589048756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 589048757}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &589048757
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589048756}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1945428400}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &630793902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,6 +1825,7 @@ GameObject:
   - component: {fileID: 630793904}
   - component: {fileID: 630793907}
   - component: {fileID: 630793908}
+  - component: {fileID: 630793909}
   m_Layer: 0
   m_Name: City 9
   m_TagString: UpCity
@@ -1558,7 +1909,8 @@ Transform:
   m_LocalPosition: {x: 1.4702749, y: 26.231634, z: 8.01961}
   m_LocalScale: {x: 3, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 711965221}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
@@ -1590,6 +1942,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &630793909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630793902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 9
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 500
+  _spawn: {fileID: 711965221}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &679372032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,7 +2006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 708839607}
   m_Layer: 0
-  m_Name: SpawnHouseLevel1
+  m_Name: SpawnHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1654,6 +2025,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 875931541}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &711965220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 711965221}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &711965221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711965220}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 630793906}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &724784115
@@ -1909,6 +2311,37 @@ MonoBehaviour:
   InitialPrice: 100
   _spawn: {fileID: 477448037}
   _uiBuyCity: {fileID: 1004090727}
+--- !u!1 &774569217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 774569218}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &774569218
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774569217}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 862281257}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &795617411
 GameObject:
   m_ObjectHideFlags: 0
@@ -2023,6 +2456,7 @@ GameObject:
   - component: {fileID: 862281255}
   - component: {fileID: 862281258}
   - component: {fileID: 862281259}
+  - component: {fileID: 862281260}
   m_Layer: 0
   m_Name: City 13
   m_TagString: UpCity
@@ -2106,7 +2540,8 @@ Transform:
   m_LocalPosition: {x: 7.870275, y: 26.231634, z: 8.01961}
   m_LocalScale: {x: 3, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 774569218}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
@@ -2138,6 +2573,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &862281260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862281253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 13
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 350
+  _spawn: {fileID: 774569218}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &875931537
 GameObject:
   m_ObjectHideFlags: 0
@@ -2280,13 +2734,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IdCity: 0
+  IdCity: 3
   IdOwner: 0
   HasPlayer: 0
   WasBought: 0
-  InitialPrice: 0
-  _spawn: {fileID: 0}
-  _uiBuyCity: {fileID: 0}
+  InitialPrice: 150
+  _spawn: {fileID: 708839607}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &891441354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2300,6 +2754,7 @@ GameObject:
   - component: {fileID: 891441356}
   - component: {fileID: 891441359}
   - component: {fileID: 891441360}
+  - component: {fileID: 891441361}
   m_Layer: 0
   m_Name: City 24
   m_TagString: DownCity
@@ -2383,7 +2838,8 @@ Transform:
   m_LocalPosition: {x: 6.270275, y: 26.231634, z: -6.28039}
   m_LocalScale: {x: 3, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1489850186}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
@@ -2415,6 +2871,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &891441361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891441354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 24
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 700
+  _spawn: {fileID: 1489850186}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &944125454
 GameObject:
   m_ObjectHideFlags: 0
@@ -2461,6 +2936,7 @@ GameObject:
   - component: {fileID: 956981607}
   - component: {fileID: 956981610}
   - component: {fileID: 956981611}
+  - component: {fileID: 956981612}
   m_Layer: 0
   m_Name: City 18
   m_TagString: RightCity
@@ -2544,7 +3020,8 @@ Transform:
   m_LocalPosition: {x: 11.820275, y: 26.231634, z: 0.8696103}
   m_LocalScale: {x: 3, y: 1.5000001, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1732643663}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -2576,6 +3053,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &956981612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956981605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 18
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 50
+  _spawn: {fileID: 1732643663}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &1000763226
 GameObject:
   m_ObjectHideFlags: 0
@@ -2935,6 +3431,7 @@ GameObject:
   - component: {fileID: 1054969901}
   - component: {fileID: 1054969904}
   - component: {fileID: 1054969905}
+  - component: {fileID: 1054969906}
   m_Layer: 0
   m_Name: City 8
   m_TagString: UpCity
@@ -3018,7 +3515,8 @@ Transform:
   m_LocalPosition: {x: -0.1297245, y: 26.231634, z: 8.01961}
   m_LocalScale: {x: 3, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 483881943}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
@@ -3050,6 +3548,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1054969906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054969899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 8
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 400
+  _spawn: {fileID: 483881943}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &1069168737
 GameObject:
   m_ObjectHideFlags: 0
@@ -3197,6 +3714,7 @@ GameObject:
   - component: {fileID: 1076874164}
   - component: {fileID: 1076874165}
   - component: {fileID: 1076874166}
+  - component: {fileID: 1076874167}
   m_Layer: 0
   m_Name: City 16
   m_TagString: RightCity
@@ -3267,7 +3785,8 @@ Transform:
   m_LocalPosition: {x: 11.820275, y: 26.231634, z: 4.06961}
   m_LocalScale: {x: 3, y: 1.5000001, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1558559854}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -3312,6 +3831,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1076874167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076874161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 16
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 230
+  _spawn: {fileID: 1558559854}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &1084561732
 GameObject:
   m_ObjectHideFlags: 0
@@ -3325,6 +3863,7 @@ GameObject:
   - component: {fileID: 1084561734}
   - component: {fileID: 1084561737}
   - component: {fileID: 1084561738}
+  - component: {fileID: 1084561739}
   m_Layer: 0
   m_Name: City 19
   m_TagString: RightCity
@@ -3408,7 +3947,8 @@ Transform:
   m_LocalPosition: {x: 11.820275, y: 26.231634, z: -0.7303896}
   m_LocalScale: {x: 3, y: 1.5000001, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 483847397}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -3440,6 +3980,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1084561739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084561732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 19
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 650
+  _spawn: {fileID: 483847397}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &1202262059
 GameObject:
   m_ObjectHideFlags: 0
@@ -3661,6 +4220,7 @@ GameObject:
   - component: {fileID: 1235486116}
   - component: {fileID: 1235486119}
   - component: {fileID: 1235486120}
+  - component: {fileID: 1235486121}
   m_Layer: 0
   m_Name: City 23
   m_TagString: DownCity
@@ -3744,7 +4304,8 @@ Transform:
   m_LocalPosition: {x: 7.870275, y: 26.231634, z: -6.28039}
   m_LocalScale: {x: 3, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 223447254}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
@@ -3776,6 +4337,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1235486121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235486114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 23
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 360
+  _spawn: {fileID: 223447254}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &1273534840
 GameObject:
   m_ObjectHideFlags: 0
@@ -3789,6 +4369,7 @@ GameObject:
   - component: {fileID: 1273534842}
   - component: {fileID: 1273534845}
   - component: {fileID: 1273534846}
+  - component: {fileID: 1273534847}
   m_Layer: 0
   m_Name: City 14
   m_TagString: UpCity
@@ -3872,7 +4453,8 @@ Transform:
   m_LocalPosition: {x: 9.470275, y: 26.231634, z: 8.01961}
   m_LocalScale: {x: 3, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 548713236}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
@@ -3904,6 +4486,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1273534847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273534840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 14
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 400
+  _spawn: {fileID: 548713236}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &1294233836
 GameObject:
   m_ObjectHideFlags: 0
@@ -3937,6 +4538,37 @@ Transform:
   - {fileID: 1787642350}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1328652954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1328652955}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1328652955
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328652954}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1726374814}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1337222821
 GameObject:
@@ -4006,6 +4638,37 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!1 &1337384599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1337384600}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1337384600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337384599}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1963721079}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1358270965
 GameObject:
   m_ObjectHideFlags: 0
@@ -4019,6 +4682,7 @@ GameObject:
   - component: {fileID: 1358270967}
   - component: {fileID: 1358270970}
   - component: {fileID: 1358270971}
+  - component: {fileID: 1358270972}
   m_Layer: 0
   m_Name: City 27
   m_TagString: DownCity
@@ -4102,7 +4766,8 @@ Transform:
   m_LocalPosition: {x: 1.4702749, y: 26.231634, z: -6.28039}
   m_LocalScale: {x: 3, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2112161153}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
@@ -4134,6 +4799,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1358270972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358270965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 27
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 120
+  _spawn: {fileID: 2112161153}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &1359576368
 GameObject:
   m_ObjectHideFlags: 0
@@ -4167,6 +4851,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1406437290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1406437291}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1406437291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406437290}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1658547218}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1410140736
 GameObject:
   m_ObjectHideFlags: 0
@@ -4180,6 +4895,7 @@ GameObject:
   - component: {fileID: 1410140738}
   - component: {fileID: 1410140741}
   - component: {fileID: 1410140742}
+  - component: {fileID: 1410140743}
   m_Layer: 0
   m_Name: City 15
   m_TagString: RightCity
@@ -4263,7 +4979,8 @@ Transform:
   m_LocalPosition: {x: 11.820275, y: 26.231634, z: 5.66961}
   m_LocalScale: {x: 3, y: 1.5000001, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2013252314}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -4295,6 +5012,56 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1410140743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410140736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 15
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 130
+  _spawn: {fileID: 2013252314}
+  _uiBuyCity: {fileID: 1004090727}
+--- !u!1 &1459456589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1459456590}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1459456590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459456589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1836518008}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1464614188
 GameObject:
   m_ObjectHideFlags: 0
@@ -4505,7 +5272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1485689300}
   m_Layer: 0
-  m_Name: SpawnHouseLevel1
+  m_Name: SpawnHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4524,6 +5291,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 463821684}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1489850185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1489850186}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1489850186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489850185}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 891441358}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1523929621
@@ -4643,7 +5441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1540908494}
   m_Layer: 0
-  m_Name: SpawnHouseLevel1
+  m_Name: SpawnHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4664,6 +5462,37 @@ Transform:
   m_Father: {fileID: 18684799}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1558559853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1558559854}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1558559854
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558559853}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.00000031789145, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1076874163}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1582692239
 GameObject:
   m_ObjectHideFlags: 0
@@ -4674,7 +5503,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1582692240}
   m_Layer: 0
-  m_Name: SpawnHouseLevel1
+  m_Name: SpawnHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4708,6 +5537,7 @@ GameObject:
   - component: {fileID: 1595306203}
   - component: {fileID: 1595306206}
   - component: {fileID: 1595306207}
+  - component: {fileID: 1595306208}
   m_Layer: 0
   m_Name: City 1
   m_TagString: LeftCity
@@ -4824,6 +5654,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1595306208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595306201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 1
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 90
+  _spawn: {fileID: 1606934548}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &1596305209
 GameObject:
   m_ObjectHideFlags: 0
@@ -4837,6 +5686,7 @@ GameObject:
   - component: {fileID: 1596305211}
   - component: {fileID: 1596305214}
   - component: {fileID: 1596305215}
+  - component: {fileID: 1596305216}
   m_Layer: 0
   m_Name: City 12
   m_TagString: UpCity
@@ -4920,7 +5770,8 @@ Transform:
   m_LocalPosition: {x: 6.270275, y: 26.231634, z: 8.01961}
   m_LocalScale: {x: 3, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1599941246}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
@@ -4952,6 +5803,56 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1596305216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596305209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 12
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 120
+  _spawn: {fileID: 1599941246}
+  _uiBuyCity: {fileID: 1004090727}
+--- !u!1 &1599941245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1599941246}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1599941246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599941245}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1596305213}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1606934547
 GameObject:
   m_ObjectHideFlags: 0
@@ -4962,7 +5863,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1606934548}
   m_Layer: 0
-  m_Name: SpawnHouseLevel1
+  m_Name: SpawnHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5079,6 +5980,7 @@ GameObject:
   - component: {fileID: 1658547216}
   - component: {fileID: 1658547219}
   - component: {fileID: 1658547220}
+  - component: {fileID: 1658547221}
   m_Layer: 0
   m_Name: City 10
   m_TagString: UpCity
@@ -5162,7 +6064,8 @@ Transform:
   m_LocalPosition: {x: 3.0702753, y: 26.231634, z: 8.01961}
   m_LocalScale: {x: 3, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1406437291}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
@@ -5194,6 +6097,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1658547221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658547214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 10
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 600
+  _spawn: {fileID: 1406437291}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &1669231194
 GameObject:
   m_ObjectHideFlags: 0
@@ -5508,6 +6430,7 @@ GameObject:
   - component: {fileID: 1726374812}
   - component: {fileID: 1726374815}
   - component: {fileID: 1726374816}
+  - component: {fileID: 1726374817}
   m_Layer: 0
   m_Name: City 26
   m_TagString: DownCity
@@ -5591,7 +6514,8 @@ Transform:
   m_LocalPosition: {x: 3.0702753, y: 26.231634, z: -6.28039}
   m_LocalScale: {x: 3, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1328652955}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
@@ -5623,6 +6547,56 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1726374817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726374810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 26
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 900
+  _spawn: {fileID: 1328652955}
+  _uiBuyCity: {fileID: 1004090727}
+--- !u!1 &1732643662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1732643663}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1732643663
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732643662}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 956981609}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1781552485
 GameObject:
   m_ObjectHideFlags: 0
@@ -5750,6 +6724,7 @@ GameObject:
   - component: {fileID: 1835086651}
   - component: {fileID: 1835086654}
   - component: {fileID: 1835086655}
+  - component: {fileID: 1835086656}
   m_Layer: 0
   m_Name: City 5
   m_TagString: LeftCity
@@ -5866,6 +6841,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1835086656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835086649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 5
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 300
+  _spawn: {fileID: 576468397}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &1836518004
 GameObject:
   m_ObjectHideFlags: 0
@@ -5879,6 +6873,7 @@ GameObject:
   - component: {fileID: 1836518006}
   - component: {fileID: 1836518009}
   - component: {fileID: 1836518010}
+  - component: {fileID: 1836518011}
   m_Layer: 0
   m_Name: City 11
   m_TagString: UpCity
@@ -5962,7 +6957,8 @@ Transform:
   m_LocalPosition: {x: 4.670275, y: 26.231634, z: 8.01961}
   m_LocalScale: {x: 3, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1459456590}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
@@ -5994,6 +6990,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1836518011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836518004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 11
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 100
+  _spawn: {fileID: 1459456590}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &1837544912
 GameObject:
   m_ObjectHideFlags: 0
@@ -6141,6 +7156,7 @@ GameObject:
   - component: {fileID: 1864733647}
   - component: {fileID: 1864733650}
   - component: {fileID: 1864733651}
+  - component: {fileID: 1864733652}
   m_Layer: 0
   m_Name: City 21
   m_TagString: RightCity
@@ -6224,7 +7240,8 @@ Transform:
   m_LocalPosition: {x: 11.820275, y: 26.231634, z: -3.9303894}
   m_LocalScale: {x: 3, y: 1.5000001, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1882261930}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -6256,6 +7273,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1864733652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864733645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 21
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 740
+  _spawn: {fileID: 1882261930}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &1873904417
 GameObject:
   m_ObjectHideFlags: 0
@@ -6338,6 +7374,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873904417}
   m_CullTransparentMesh: 1
+--- !u!1 &1882261929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1882261930}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1882261930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882261929}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1864733649}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1911024228
 GameObject:
   m_ObjectHideFlags: 0
@@ -6427,6 +7494,7 @@ GameObject:
   - component: {fileID: 1945428398}
   - component: {fileID: 1945428401}
   - component: {fileID: 1945428402}
+  - component: {fileID: 1945428403}
   m_Layer: 0
   m_Name: City 25
   m_TagString: DownCity
@@ -6510,7 +7578,8 @@ Transform:
   m_LocalPosition: {x: 4.670275, y: 26.231634, z: -6.28039}
   m_LocalScale: {x: 3, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 589048757}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
@@ -6542,6 +7611,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1945428403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945428396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 25
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 720
+  _spawn: {fileID: 589048757}
+  _uiBuyCity: {fileID: 1004090727}
 --- !u!1 &1963721075
 GameObject:
   m_ObjectHideFlags: 0
@@ -6555,6 +7643,7 @@ GameObject:
   - component: {fileID: 1963721077}
   - component: {fileID: 1963721080}
   - component: {fileID: 1963721081}
+  - component: {fileID: 1963721082}
   m_Layer: 0
   m_Name: City 22
   m_TagString: DownCity
@@ -6638,7 +7727,8 @@ Transform:
   m_LocalPosition: {x: 9.470275, y: 26.231634, z: -6.28039}
   m_LocalScale: {x: 3, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1337384600}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
@@ -6670,6 +7760,56 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1963721082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963721075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 22
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 440
+  _spawn: {fileID: 1337384600}
+  _uiBuyCity: {fileID: 1004090727}
+--- !u!1 &2013252313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2013252314}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2013252314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013252313}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1410140740}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2062689906
 GameObject:
   m_ObjectHideFlags: 0
@@ -6683,6 +7823,7 @@ GameObject:
   - component: {fileID: 2062689908}
   - component: {fileID: 2062689911}
   - component: {fileID: 2062689912}
+  - component: {fileID: 2062689913}
   m_Layer: 0
   m_Name: City 17
   m_TagString: RightCity
@@ -6766,7 +7907,8 @@ Transform:
   m_LocalPosition: {x: 11.820275, y: 26.231634, z: 2.4696102}
   m_LocalScale: {x: 3, y: 1.5000001, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 532822607}
   m_Father: {fileID: 1053189068}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -6798,3 +7940,53 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2062689913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062689906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e004bfaee8139fc43af36dcb33504b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdCity: 17
+  IdOwner: 0
+  HasPlayer: 0
+  WasBought: 0
+  InitialPrice: 450
+  _spawn: {fileID: 532822607}
+  _uiBuyCity: {fileID: 1004090727}
+--- !u!1 &2112161152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2112161153}
+  m_Layer: 0
+  m_Name: SpawnHouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2112161153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112161152}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1358270969}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
