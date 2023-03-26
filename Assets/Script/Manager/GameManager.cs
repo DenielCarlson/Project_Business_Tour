@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     private GameObject currentCity;
     [SerializeField] private GameObject _uiBuyCity;
     [SerializeField] private GameObject _uiBuildHouse;
+    [SerializeField] private Button _houseLevel1;
 
     void Awake()
     {
@@ -63,6 +64,8 @@ public class GameManager : MonoBehaviourPunCallbacks
         //Organiza a lista em ordem de entrada para todos os jogadores
         _players.Sort((p1, p2) => p1.ActorNumber.CompareTo(p2.ActorNumber));
         TurnSystem();
+        CurrentPlayerAndCity();
+        ButtonsHouseValidation();
     }
 
 
@@ -141,18 +144,24 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     //Manager das cidade
 
+    private void CurrentPlayerAndCity()
+    {
+        foreach (var obj in _playerObjects)
+        {
+            if (obj.GetComponent<PlayerScript>().ID == _players[_currentPlayerTurnIndex].ActorNumber)
+            {
+                currentPlayer = obj;
+                currentCity = obj.GetComponent<PlayerScript>().Cities[obj.GetComponent<PlayerScript>().CityIndexVar];
+            }
+        }
+
+    }
+
     public void OnBuyCityClick()
     {
         if (IsCurrentPlayerTurn())
         {
-            foreach (var obj in _playerObjects) 
-            {
-                if (obj.GetComponent<PlayerScript>().ID == _players[_currentPlayerTurnIndex].ActorNumber)
-                {
-                    currentPlayer = obj;
-                    currentCity = obj.GetComponent<PlayerScript>().Cities[obj.GetComponent<PlayerScript>().CityIndexVar];
-                }
-            }
+          
 
             if (currentCity.GetComponent<City>().HasPlayer && currentCity.GetComponent<City>().WasBought == false)
             {
@@ -163,7 +172,6 @@ public class GameManager : MonoBehaviourPunCallbacks
                     currentPlayer.GetComponent<PlayerWallet>().Withdraw(currentCity.GetComponent<City>().InitialPrice);
                     currentCity.GetComponent<City>().IdOwner = currentPlayer.GetComponent<PlayerScript>().ID;
                     currentPlayer.GetComponent<PlayerScript>().MyCities.Add(currentCity);
-                    currentCity.GetComponent<City>().BuildFlag();
 
                     _uiBuyCity.SetActive(false);
                     _uiBuildHouse.SetActive(true);
@@ -177,27 +185,45 @@ public class GameManager : MonoBehaviourPunCallbacks
                     currentPlayer.GetComponent<PlayerWallet>().Withdraw(currentCity.GetComponent<City>().InitialPrice);
                     currentCity.GetComponent<City>().IdOwner = currentPlayer.GetComponent<PlayerScript>().ID;
                     currentPlayer.GetComponent<PlayerScript>().MyCities.Add(currentCity);
-                    currentCity.GetComponent<City>().BuildFlag();
 
                     _uiBuyCity.SetActive(false);
                     _uiBuildHouse.SetActive(true);
                 }
             }
+
+            currentCity.GetComponent<City>().BuildFlag();
         }
     }
 
 
     public void OnBuildHouseLvlOneClick()
     {
-        if (currentPlayer.GetComponent<PlayerScript>().ID == currentCity.GetComponent<City>().IdOwner)
+        if (currentCity.GetComponent<City>().LevelCity == 1)
         {
-            if (currentCity.GetComponent<City>().LevelCity == 0)
-            {
-                currentPlayer.GetComponent<PlayerWallet>().Withdraw(200);
-                currentCity.GetComponent<City>().BuildHouse();
-            }
-        
+            currentPlayer.GetComponent<PlayerWallet>().Withdraw(200);
+            currentCity.GetComponent<City>().BuildHouse();
         }
+
         _uiBuildHouse.SetActive(false);
+    }
+
+    public void CloseBuildHouse()
+    {
+        _uiBuildHouse.SetActive(false);
+    }
+
+    private void ButtonsHouseValidation()
+    {
+        Debug.Log("Entrou no metodo");
+        if (currentCity.GetComponent<City>().LevelCity > 1)
+        {
+            Debug.Log("City level 2");
+            _houseLevel1.interactable = false;
+        }
+        else if(currentCity.GetComponent<City>().LevelCity == 1)
+        {
+            Debug.Log("City level level 1");
+            _houseLevel1.interactable = true;
+        }
     }
 }

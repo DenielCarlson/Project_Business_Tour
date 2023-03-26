@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class City : MonoBehaviour
+public class City : MonoBehaviourPunCallbacks
 {
     public int IdCity;
-    public int IdOwner;
+    public int? IdOwner;
     public int LevelCity { get => _levelCity; private set => _levelCity = value; }
     public bool HasPlayer;
     public bool WasBought;
@@ -17,7 +18,7 @@ public class City : MonoBehaviour
 
     private GameObject _flag;
 
-    private int _levelCity;
+    public int _levelCity;
     private bool _isOwn;
 
     [SerializeField] private Transform _spawn;
@@ -33,15 +34,6 @@ public class City : MonoBehaviour
     private void Update()
     {
 
-        if (_levelCity >= 2)
-        {
-            _uiBuildHouse.GetComponentInChildren<Button>().interactable = false;
-        }
-        else
-        {
-            _uiBuildHouse.GetComponentInChildren<Button>().interactable = true;
-        }
-
         if (IdOwner > 0)
         {
             _isOwn = true;
@@ -53,33 +45,51 @@ public class City : MonoBehaviour
     public void BuildFlag()
     {
         _flag = Resources.Load("PurchasedFlag") as GameObject;
-        Instantiate(_flag, _spawn.position, Quaternion.identity);
-    }
-
-    public void BuildHouse()
-    {
-        Debug.Log("Destroyed");
-        Destroy(_flag);
+        _flag.name = "PurchasedFlag" + IdCity;
 
         if (gameObject.CompareTag("LeftCity") || gameObject.CompareTag("RightCity"))
         {
             _spawn.position = new Vector3(transform.position.x + 1, transform.position.y + 0.4f, transform.position.z);
-            GameObject house = Resources.Load("HouseLevel1") as GameObject;
-            Instantiate(house, _spawn.position, Quaternion.identity);
-
+            Instantiate(_flag, _spawn.position, Quaternion.identity);
         }
         else if (gameObject.CompareTag("UpCity") || gameObject.CompareTag("DownCity"))
         {
             _spawn.position = new Vector3(transform.position.x, transform.position.y + 0.4f, transform.position.z + 1);
-            GameObject house = Resources.Load("HouseLevel1") as GameObject;
-            Instantiate(house, _spawn.position, Quaternion.identity);
+            Instantiate(_flag, _spawn.position, Quaternion.identity);
+        }
+        
+        _levelCity++;
+    }
 
+
+    public void BuildHouse()
+    {
+
+        GameObject flag = GameObject.Find("PurchasedFlag" + IdCity + "(Clone)");
+        Destroy(flag);
+
+        if (_levelCity == 1)
+        {
+            if (gameObject.CompareTag("LeftCity") || gameObject.CompareTag("RightCity"))
+            {
+                _spawn.position = new Vector3(transform.position.x + 1, transform.position.y + 0.4f, transform.position.z);
+                GameObject house = Resources.Load("HouseLevel1") as GameObject;
+                Instantiate(house, _spawn.position, Quaternion.identity);
+
+            }
+            else if (gameObject.CompareTag("UpCity") || gameObject.CompareTag("DownCity"))
+            {
+                _spawn.position = new Vector3(transform.position.x, transform.position.y + 0.4f, transform.position.z + 1);
+                GameObject house = Resources.Load("HouseLevel1") as GameObject;
+                Instantiate(house, _spawn.position, Quaternion.identity);
+
+            }
         }
 
         _levelCity++;
     }
 
-    void EnableUIBuyHouse()
+    void EnableUIBuyCity()
     {
         _uiBuyCity.SetActive(true);
     }
@@ -98,10 +108,12 @@ public class City : MonoBehaviour
             {
                 HasPlayer = true;
                 Player = other.gameObject;
-                Invoke("EnableUIBuyHouse", 0.5f);
+                Invoke("EnableUIBuyCity", 0.5f);
             }
             else if (Player.GetComponent<PlayerScript>().RecipientIdCity == this.IdCity && Player.GetComponent<PlayerScript>().ID == IdOwner)
             {
+                HasPlayer = true;
+                Player = other.gameObject;
                 Invoke("EnableUIBuildHouse", 0.5f);
             }
 

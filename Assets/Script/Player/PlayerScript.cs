@@ -10,7 +10,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
 {
     public GameObject[] Cities { get => _cities; private set => _cities = value; }
     public int CityIndexVar { get => _cityIndex; private set => _cityIndex = value; }
-    
+
     private GameObject[] _cities;//Array que vai Armazenar todos os blocos do jogo
 
     private Vector3 direction;//Direção que o player vai seguir
@@ -100,7 +100,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
         if (photonView.IsMine)
         {
             Move();
-            
+
         }
     }
 
@@ -114,13 +114,12 @@ public class PlayerScript : MonoBehaviourPunCallbacks
         else if (_isUpOrDown)
         {
             _currentPos = new Vector3(_cities[_cityIndex].transform.position.x, transform.position.y, _cities[_cityIndex].transform.position.z - 1);
+            
         }
         else
         {
             _currentPos = new Vector3(_cities[_cityIndex].transform.position.x, transform.position.y, _cities[_cityIndex].transform.position.z);
         }
-
-        RecipientIdCity = _cities[_cityIndex].GetComponent<City>().IdCity;
 
         // Se a poção do player for diferente de _currentPos, ele deve se mover pelo tabuleiro até que sua posição seja igual a _currentPos
         if (transform.position != _currentPos)
@@ -157,6 +156,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
             _isUpOrDown = false;
 
             transform.position = new Vector3(other.gameObject.transform.position.x - 1, transform.position.y, other.gameObject.transform.position.z);
+            RecipientIdCity = _cities[_cityIndex].GetComponent<City>().IdCity;
         }
 
         //Se meu Player estiver nas cidades de cima ou de baixo, seu eixo z será o mesmo da cidade, porém - 1 
@@ -165,6 +165,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
             _isUpOrDown = true;
             _isRightOrLeft = false;
             transform.position = new Vector3(other.gameObject.transform.position.x, transform.position.y, other.gameObject.transform.position.z - 1);
+            RecipientIdCity = _cities[_cityIndex].GetComponent<City>().IdCity;
         }
 
         //Se meu player não estiver nem nas cidade dos lados nem em cima ou em baixo, sua posição será a mesma da cidade onde ele se encontra
@@ -179,8 +180,8 @@ public class PlayerScript : MonoBehaviourPunCallbacks
         //se ele estiver no bloco Start, a direção do player é Subindo e roud é incrementado + 1
         if (other.gameObject == GameObject.Find("Start"))
         {
-            _round++;
             direction = Vector3.forward * Time.deltaTime * _speed;
+            _round++;
         }
 
         //se ele estiver no bloco Lost Island, a direção do player é Direita
