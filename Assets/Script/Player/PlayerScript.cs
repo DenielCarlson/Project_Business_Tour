@@ -100,7 +100,6 @@ public class PlayerScript : MonoBehaviourPunCallbacks
         if (photonView.IsMine)
         {
             Move();
-            RecipientIdCity = _cities[_cityIndex].GetComponent<City>().IdCity;
             
         }
     }
@@ -120,6 +119,8 @@ public class PlayerScript : MonoBehaviourPunCallbacks
         {
             _currentPos = new Vector3(_cities[_cityIndex].transform.position.x, transform.position.y, _cities[_cityIndex].transform.position.z);
         }
+
+        RecipientIdCity = _cities[_cityIndex].GetComponent<City>().IdCity;
 
         // Se a poção do player for diferente de _currentPos, ele deve se mover pelo tabuleiro até que sua posição seja igual a _currentPos
         if (transform.position != _currentPos)

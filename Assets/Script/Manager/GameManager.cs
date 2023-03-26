@@ -163,6 +163,7 @@ public class GameManager : MonoBehaviourPunCallbacks
                     currentPlayer.GetComponent<PlayerWallet>().Withdraw(currentCity.GetComponent<City>().InitialPrice);
                     currentCity.GetComponent<City>().IdOwner = currentPlayer.GetComponent<PlayerScript>().ID;
                     currentPlayer.GetComponent<PlayerScript>().MyCities.Add(currentCity);
+                    currentCity.GetComponent<City>().BuildFlag();
 
                     _uiBuyCity.SetActive(false);
                     _uiBuildHouse.SetActive(true);
@@ -176,6 +177,7 @@ public class GameManager : MonoBehaviourPunCallbacks
                     currentPlayer.GetComponent<PlayerWallet>().Withdraw(currentCity.GetComponent<City>().InitialPrice);
                     currentCity.GetComponent<City>().IdOwner = currentPlayer.GetComponent<PlayerScript>().ID;
                     currentPlayer.GetComponent<PlayerScript>().MyCities.Add(currentCity);
+                    currentCity.GetComponent<City>().BuildFlag();
 
                     _uiBuyCity.SetActive(false);
                     _uiBuildHouse.SetActive(true);
@@ -189,11 +191,13 @@ public class GameManager : MonoBehaviourPunCallbacks
     {
         if (currentPlayer.GetComponent<PlayerScript>().ID == currentCity.GetComponent<City>().IdOwner)
         {
-            Debug.Log("Entrou");
-            currentPlayer.GetComponent<PlayerWallet>().Withdraw(200);
-            currentCity.GetComponent<City>().BuildHouse();
+            if (currentCity.GetComponent<City>().LevelCity == 0)
+            {
+                currentPlayer.GetComponent<PlayerWallet>().Withdraw(200);
+                currentCity.GetComponent<City>().BuildHouse();
+            }
+        
         }
-        Debug.Log("Não entrou");
         _uiBuildHouse.SetActive(false);
     }
 }
