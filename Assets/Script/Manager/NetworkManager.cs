@@ -62,19 +62,19 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         ServerInfo.text += "\nVocê entrou na sala";
         ServerInfo.text += "\nMeu id: " + PhotonNetwork.LocalPlayer;
-        GameManager.Instance.photonView.RPC("CreatePlayer", RpcTarget.AllBuffered);
+        //GameManager.Instance.photonView.RPC("CreatePlayer", RpcTarget.AllBuffered);
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         ServerInfo.text += "\nOutro jogador entou na sala, jogador nickname: " + newPlayer.NickName;
-        /*if (PhotonNetwork.PlayerList.Length == 2)
+       if (PhotonNetwork.PlayerList.Length == 2)
         {
             if (PhotonNetwork.IsMasterClient)
             {
                 GameManager.Instance.photonView.RPC("CreatePlayer", RpcTarget.AllBuffered);
             }
-        }*/
+        }
 
     }
 

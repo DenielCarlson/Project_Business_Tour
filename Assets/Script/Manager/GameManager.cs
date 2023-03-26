@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviourPunCallbacks
     //Número que é aumentado a cada turno, necessário para decidir o jogador seguinte
     private int _turnCount;
 
+    private bool _buttonRollValidation;
+
     //spawn dos objetos de jogadores
     [SerializeField] private Transform _spawn;
     //informações na tela - isso será temporário
@@ -38,6 +40,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject _uiBuyCity;
     [SerializeField] private GameObject _uiBuildHouse;
     [SerializeField] private Button _houseLevel1;
+    [SerializeField] private GameObject _uiRebuy;
 
     void Awake()
     {
@@ -73,6 +76,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     [PunRPC]
     void NextTurn()
     {
+        _buttonRollValidation = false;
         _turnCount++;
         _currentPlayerTurnIndex = _turnCount % _players.Count;
     }
@@ -87,16 +91,8 @@ public class GameManager : MonoBehaviourPunCallbacks
     //Método que é atrelado ao btnRoll, que faz o player jogar os dados e passar o turno
     public void OnRollDiceClick()
     {
-        if (_currentPlayerTurnIndex == 0)
-        {
-            OnRolledDice();
-            photonView.RPC("NextTurn", RpcTarget.All);
-        }
-        else
-        {
-            OnRolledDice();
-            photonView.RPC("NextTurn", RpcTarget.All);
-        }
+        OnRolledDice();
+        _buttonRollValidation = true;
     }
 
     //Lógica dos dados, onde o player atual jogar os dados e faz o playerObj se movimentar no tabuleiro
@@ -104,7 +100,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     {
         GameObject currentPlayerTurn = null;
 
-        foreach(var obj in _playerObjects)
+        foreach (var obj in _playerObjects)
         {
             if (_players[_currentPlayerTurnIndex] == obj.GetComponent<PlayerScript>().PhotonPlayer)
             {
@@ -122,7 +118,14 @@ public class GameManager : MonoBehaviourPunCallbacks
 
         if (IsCurrentPlayerTurn())
         {
-            _rollUI.SetActive(true);
+            if (_buttonRollValidation == false)
+            {
+                _rollUI.SetActive(true);
+            }
+            else
+            {
+                _rollUI.SetActive(false);
+            }
         }
         else
         {
@@ -142,8 +145,33 @@ public class GameManager : MonoBehaviourPunCallbacks
     }
 
 
-    //Manager das cidade
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //Esse método  ele pega o objeto do jogador atual e apartir disso localiza a cidade em que o jogador atual está e a guarda em uma variável
     private void CurrentPlayerAndCity()
     {
         foreach (var obj in _playerObjects)
@@ -157,33 +185,46 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     }
 
+
+    //Método que será atribuído ao button Buy
     public void OnBuyCityClick()
     {
+        //se for a vez do jogador atual, ele ativa essa condição
         if (IsCurrentPlayerTurn())
         {
-          
 
+            //se a casa na qual o jogador chegar tiver outro player e essa casa ainda não tiver sido comprada, o jogador atual da cidade passa a ser o jogador do turno atual 
             if (currentCity.GetComponent<City>().HasPlayer && currentCity.GetComponent<City>().WasBought == false)
             {
                 currentCity.GetComponent<City>().Player = currentPlayer;
 
+                //Se o dinheiro do jogador atual for maior que o valor da cidade, ele poderá comprar a cidade
                 if (currentPlayer.GetComponent<PlayerWallet>().Money > currentCity.GetComponent<City>().InitialPrice)
                 {
+                    // o valor da cidade é debitado da conta do jogador
                     currentPlayer.GetComponent<PlayerWallet>().Withdraw(currentCity.GetComponent<City>().InitialPrice);
+                    // e o jogador vira dono do turno atual
                     currentCity.GetComponent<City>().IdOwner = currentPlayer.GetComponent<PlayerScript>().ID;
+                    currentCity.GetComponent<City>().photonView.RPC("CityWasBought", RpcTarget.All);
+                    // e essa cidade é adicionada na lista de cidades pertencentes ao jogador atual
                     currentPlayer.GetComponent<PlayerScript>().MyCities.Add(currentCity);
 
+                    //a tela para comprar desaparece e aparece a tela para construir casas
                     _uiBuyCity.SetActive(false);
                     _uiBuildHouse.SetActive(true);
                 }
 
             }
-            else if(currentCity.GetComponent<City>().HasPlayer == false && currentCity.GetComponent<City>().WasBought == false)
+
+            //Caso não tenha um jogador na cidade e ela n foi comprada, o jogador do turno atual pode compra-lá
+            else if (currentCity.GetComponent<City>().HasPlayer == false && currentCity.GetComponent<City>().WasBought == false)
             {
+                //essa condição é a mesma do if acima
                 if (currentPlayer.GetComponent<PlayerWallet>().Money > currentCity.GetComponent<City>().InitialPrice)
                 {
                     currentPlayer.GetComponent<PlayerWallet>().Withdraw(currentCity.GetComponent<City>().InitialPrice);
                     currentCity.GetComponent<City>().IdOwner = currentPlayer.GetComponent<PlayerScript>().ID;
+                    currentCity.GetComponent<City>().photonView.RPC("CityWasBought", RpcTarget.All);
                     currentPlayer.GetComponent<PlayerScript>().MyCities.Add(currentCity);
 
                     _uiBuyCity.SetActive(false);
@@ -191,38 +232,67 @@ public class GameManager : MonoBehaviourPunCallbacks
                 }
             }
 
+            //Como essa função só aparece quando o jogador clicka no button de comprar, então toda vez que ele comprar, irá spawnar uma bandeira na cidade que ele comprou
+            //Porém essa função ainda está incompleta, pois se o jogador não tiver dinheiro, a bandeira não pode aparecer e portando no futuro essa função será melhorada ou substituída 
             currentCity.GetComponent<City>().BuildFlag();
         }
     }
 
 
+    //Método chamando quando o jogador clickar no button de contruir casas do lvl 1
     public void OnBuildHouseLvlOneClick()
     {
-        if (currentCity.GetComponent<City>().LevelCity == 1)
+
+        //Caso a cidade onde o jogador atual está seja dele, e ela esteja no level 1, essa condição se ativará
+        if (currentCity.GetComponent<City>().LevelCity == 1 && currentPlayer.GetComponent<PlayerScript>().ID == currentCity.GetComponent<City>().IdOwner)
         {
+            //é debitado o valor para contruir casas lvl 1 da conta do jogador atual
             currentPlayer.GetComponent<PlayerWallet>().Withdraw(200);
+            //Uma casa lvl 1 é spawnada na cidade do jogador atual
             currentCity.GetComponent<City>().BuildHouse();
         }
 
+        //Jogador atual passa a vez e a tela de contruir casas desaparece
+        photonView.RPC("NextTurn", RpcTarget.All);
         _uiBuildHouse.SetActive(false);
     }
 
+    //esse método será chamado qndo o jogador atual clickar no button close que fica na tela para comprar a cidade
+    //ele passa a vez e a tela de comprar a cidade desaparece para o jogador 
+    public void CloseBuyHouse()
+    {
+        _uiBuyCity.SetActive(false);
+        photonView.RPC("NextTurn", RpcTarget.All);
+    }
+
+
+    //esse faz a mesma função do método acima, a diferença é que esse será chamando no close da tela de construir casas
     public void CloseBuildHouse()
     {
         _uiBuildHouse.SetActive(false);
+        photonView.RPC("NextTurn", RpcTarget.All);
     }
 
+    //esse faz a mesma função do método acima, a diferença é que esse será chamando no close da tela de recomprar a cidade
+    public void CloseRebuy()
+    {
+        _uiRebuy.SetActive(false);
+        photonView.RPC("NextTurn", RpcTarget.All);
+    }
+
+
+    //esse método valida se o button pode ou não ser interativo para o player atual
     private void ButtonsHouseValidation()
     {
-        Debug.Log("Entrou no metodo");
+
+        // caso a cidade tenha um level maior que 1, o jogador não poderá interagir com o button de contruir casas lvl 1
         if (currentCity.GetComponent<City>().LevelCity > 1)
         {
-            Debug.Log("City level 2");
             _houseLevel1.interactable = false;
         }
-        else if(currentCity.GetComponent<City>().LevelCity == 1)
+        //Porém caso seja level 1, o jogador poderá interagir com o button de criar casas level 1
+        else if (currentCity.GetComponent<City>().LevelCity == 1)
         {
-            Debug.Log("City level level 1");
             _houseLevel1.interactable = true;
         }
     }

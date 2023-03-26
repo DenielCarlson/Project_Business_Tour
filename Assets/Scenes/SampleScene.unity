@@ -134,8 +134,9 @@ GameObject:
   - component: {fileID: 18684799}
   - component: {fileID: 18684798}
   - component: {fileID: 18684797}
-  - component: {fileID: 18684800}
   - component: {fileID: 18684801}
+  - component: {fileID: 18684803}
+  - component: {fileID: 18684800}
   - component: {fileID: 18684802}
   m_Layer: 0
   m_Name: City 4
@@ -266,7 +267,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 4
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 200
@@ -274,6 +274,29 @@ MonoBehaviour:
   _spawn: {fileID: 1540908494}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &18684803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18684795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 31
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &30331688
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,8 +391,9 @@ GameObject:
   - component: {fileID: 45448604}
   - component: {fileID: 45448603}
   - component: {fileID: 45448602}
-  - component: {fileID: 45448605}
   - component: {fileID: 45448606}
+  - component: {fileID: 45448608}
+  - component: {fileID: 45448605}
   - component: {fileID: 45448607}
   m_Layer: 0
   m_Name: City 7
@@ -500,7 +524,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 7
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 100
@@ -508,6 +531,29 @@ MonoBehaviour:
   _spawn: {fileID: 1582692240}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &45448608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45448600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 32
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &113574558
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,8 +565,9 @@ GameObject:
   - component: {fileID: 113574562}
   - component: {fileID: 113574561}
   - component: {fileID: 113574560}
-  - component: {fileID: 113574563}
   - component: {fileID: 113574564}
+  - component: {fileID: 113574566}
+  - component: {fileID: 113574563}
   - component: {fileID: 113574565}
   m_Layer: 0
   m_Name: City 20
@@ -651,7 +698,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 20
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 560
@@ -659,6 +705,29 @@ MonoBehaviour:
   _spawn: {fileID: 183050667}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &113574566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113574558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 30
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &180611723
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,6 +761,7 @@ RectTransform:
   m_Children:
   - {fileID: 1911024229}
   - {fileID: 1704378682}
+  - {fileID: 625130319}
   m_Father: {fileID: 724784116}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -855,6 +925,7 @@ GameObject:
   - component: {fileID: 182972256}
   - component: {fileID: 182972257}
   - component: {fileID: 182972258}
+  - component: {fileID: 182972260}
   - component: {fileID: 182972259}
   m_Layer: 0
   m_Name: Lost Island
@@ -996,7 +1067,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 200
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 0
@@ -1004,6 +1074,29 @@ MonoBehaviour:
   _spawn: {fileID: 0}
   _uiBuyCity: {fileID: 0}
   _uiBuildHouse: {fileID: 0}
+  _uiRebuy: {fileID: 0}
+--- !u!114 &182972260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182972251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 29
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &183050666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,8 +1170,9 @@ GameObject:
   - component: {fileID: 245958443}
   - component: {fileID: 245958442}
   - component: {fileID: 245958441}
-  - component: {fileID: 245958444}
   - component: {fileID: 245958445}
+  - component: {fileID: 245958447}
+  - component: {fileID: 245958444}
   - component: {fileID: 245958446}
   m_Layer: 0
   m_Name: City 28
@@ -1209,7 +1303,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 28
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 520
@@ -1217,6 +1310,319 @@ MonoBehaviour:
   _spawn: {fileID: 419199685}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &245958447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245958439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 28
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!1 &306428110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 306428111}
+  - component: {fileID: 306428113}
+  - component: {fileID: 306428112}
+  m_Layer: 0
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &306428111
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306428110}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 371666950}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &306428112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306428110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Close
+--- !u!222 &306428113
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306428110}
+  m_CullTransparentMesh: 1
+--- !u!1 &324714850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 324714851}
+  - component: {fileID: 324714853}
+  - component: {fileID: 324714852}
+  m_Layer: 0
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &324714851
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324714850}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1278377255}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 700, y: 900}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &324714852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324714850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.1284265, g: 0.6321627, b: 0.6981132, a: 0.8627451}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &324714853
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324714850}
+  m_CullTransparentMesh: 1
+--- !u!1 &371666949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 371666950}
+  - component: {fileID: 371666953}
+  - component: {fileID: 371666952}
+  - component: {fileID: 371666951}
+  m_Layer: 0
+  m_Name: BtnClose
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &371666950
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371666949}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 306428111}
+  m_Father: {fileID: 1278377255}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -399.99997}
+  m_SizeDelta: {x: 100, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &371666951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371666949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 371666952}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1474566637}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: CloseRebuy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &371666952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371666949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &371666953
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371666949}
+  m_CullTransparentMesh: 1
 --- !u!1 &419199684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,6 +1654,166 @@ Transform:
   m_Father: {fileID: 245958443}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &451854654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 451854655}
+  - component: {fileID: 451854657}
+  - component: {fileID: 451854656}
+  m_Layer: 0
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &451854655
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451854654}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1405073419}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &451854656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451854654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Close
+--- !u!222 &451854657
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451854654}
+  m_CullTransparentMesh: 1
+--- !u!1 &458576623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 458576624}
+  - component: {fileID: 458576626}
+  - component: {fileID: 458576625}
+  m_Layer: 0
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &458576624
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458576623}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 625130319}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &458576625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458576623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Close
+--- !u!222 &458576626
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458576623}
+  m_CullTransparentMesh: 1
 --- !u!1 &463821680
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,8 +1825,9 @@ GameObject:
   - component: {fileID: 463821684}
   - component: {fileID: 463821683}
   - component: {fileID: 463821682}
-  - component: {fileID: 463821685}
   - component: {fileID: 463821686}
+  - component: {fileID: 463821688}
+  - component: {fileID: 463821685}
   - component: {fileID: 463821687}
   m_Layer: 0
   m_Name: City 6
@@ -1391,7 +1958,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 6
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 80
@@ -1399,6 +1965,151 @@ MonoBehaviour:
   _spawn: {fileID: 1485689300}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &463821688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463821680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 27
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!1 &475045870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 475045871}
+  - component: {fileID: 475045874}
+  - component: {fileID: 475045873}
+  - component: {fileID: 475045872}
+  m_Layer: 0
+  m_Name: BtnRebuyCity
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &475045871
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475045870}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1137981907}
+  m_Father: {fileID: 1278377255}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &475045872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475045870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 475045873}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &475045873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475045870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &475045874
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475045870}
+  m_CullTransparentMesh: 1
 --- !u!1 &477448036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,8 +2152,9 @@ GameObject:
   - component: {fileID: 478889411}
   - component: {fileID: 478889410}
   - component: {fileID: 478889409}
-  - component: {fileID: 478889412}
   - component: {fileID: 478889413}
+  - component: {fileID: 478889415}
+  - component: {fileID: 478889412}
   - component: {fileID: 478889414}
   m_Layer: 0
   m_Name: World Tour
@@ -1572,7 +2284,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 400
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 0
@@ -1580,6 +2291,29 @@ MonoBehaviour:
   _spawn: {fileID: 0}
   _uiBuyCity: {fileID: 0}
   _uiBuildHouse: {fileID: 0}
+  _uiRebuy: {fileID: 0}
+--- !u!114 &478889415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478889407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 26
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &483847396
 GameObject:
   m_ObjectHideFlags: 0
@@ -1866,6 +2600,140 @@ Transform:
   m_Father: {fileID: 1945428400}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &625130318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 625130319}
+  - component: {fileID: 625130322}
+  - component: {fileID: 625130321}
+  - component: {fileID: 625130320}
+  m_Layer: 0
+  m_Name: BtnClose
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &625130319
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625130318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 458576624}
+  m_Father: {fileID: 180611724}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -400}
+  m_SizeDelta: {x: 100, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &625130320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625130318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 625130321}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1474566637}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: CloseBuildHouse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &625130321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625130318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &625130322
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625130318}
+  m_CullTransparentMesh: 1
 --- !u!1 &630793902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1877,8 +2745,9 @@ GameObject:
   - component: {fileID: 630793906}
   - component: {fileID: 630793905}
   - component: {fileID: 630793904}
-  - component: {fileID: 630793907}
   - component: {fileID: 630793908}
+  - component: {fileID: 630793910}
+  - component: {fileID: 630793907}
   - component: {fileID: 630793909}
   m_Layer: 0
   m_Name: City 9
@@ -2009,7 +2878,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 9
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 500
@@ -2017,6 +2885,29 @@ MonoBehaviour:
   _spawn: {fileID: 711965221}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &630793910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630793902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 25
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &679372032
 GameObject:
   m_ObjectHideFlags: 0
@@ -2149,6 +3040,7 @@ RectTransform:
   - {fileID: 795617412}
   - {fileID: 1004090728}
   - {fileID: 180611724}
+  - {fileID: 1278377255}
   m_Father: {fileID: 1359576369}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2229,8 +3121,9 @@ GameObject:
   - component: {fileID: 758661225}
   - component: {fileID: 758661224}
   - component: {fileID: 758661223}
-  - component: {fileID: 758661226}
   - component: {fileID: 758661227}
+  - component: {fileID: 758661229}
+  - component: {fileID: 758661226}
   - component: {fileID: 758661228}
   m_Layer: 0
   m_Name: City 2
@@ -2361,7 +3254,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 2
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 100
@@ -2369,6 +3261,29 @@ MonoBehaviour:
   _spawn: {fileID: 477448037}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &758661229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758661221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 24
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &774569217
 GameObject:
   m_ObjectHideFlags: 0
@@ -2512,8 +3427,9 @@ GameObject:
   - component: {fileID: 862281257}
   - component: {fileID: 862281256}
   - component: {fileID: 862281255}
-  - component: {fileID: 862281258}
   - component: {fileID: 862281259}
+  - component: {fileID: 862281261}
+  - component: {fileID: 862281258}
   - component: {fileID: 862281260}
   m_Layer: 0
   m_Name: City 13
@@ -2644,7 +3560,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 13
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 350
@@ -2652,6 +3567,29 @@ MonoBehaviour:
   _spawn: {fileID: 774569218}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &862281261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862281253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 23
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &875931537
 GameObject:
   m_ObjectHideFlags: 0
@@ -2663,8 +3601,9 @@ GameObject:
   - component: {fileID: 875931541}
   - component: {fileID: 875931540}
   - component: {fileID: 875931539}
-  - component: {fileID: 875931542}
   - component: {fileID: 875931543}
+  - component: {fileID: 875931545}
+  - component: {fileID: 875931542}
   - component: {fileID: 875931544}
   m_Layer: 0
   m_Name: City 3
@@ -2795,7 +3734,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 3
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 150
@@ -2803,6 +3741,29 @@ MonoBehaviour:
   _spawn: {fileID: 708839607}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &875931545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875931537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 22
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &891441354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2814,8 +3775,9 @@ GameObject:
   - component: {fileID: 891441358}
   - component: {fileID: 891441357}
   - component: {fileID: 891441356}
-  - component: {fileID: 891441359}
   - component: {fileID: 891441360}
+  - component: {fileID: 891441362}
+  - component: {fileID: 891441359}
   - component: {fileID: 891441361}
   m_Layer: 0
   m_Name: City 24
@@ -2946,7 +3908,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 24
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 700
@@ -2954,6 +3915,29 @@ MonoBehaviour:
   _spawn: {fileID: 1489850186}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &891441362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891441354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 21
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &944125454
 GameObject:
   m_ObjectHideFlags: 0
@@ -2998,8 +3982,9 @@ GameObject:
   - component: {fileID: 956981609}
   - component: {fileID: 956981608}
   - component: {fileID: 956981607}
-  - component: {fileID: 956981610}
   - component: {fileID: 956981611}
+  - component: {fileID: 956981613}
+  - component: {fileID: 956981610}
   - component: {fileID: 956981612}
   m_Layer: 0
   m_Name: City 18
@@ -3130,7 +4115,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 18
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 50
@@ -3138,6 +4122,29 @@ MonoBehaviour:
   _spawn: {fileID: 1732643663}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &956981613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956981605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 20
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1000763226
 GameObject:
   m_ObjectHideFlags: 0
@@ -3251,6 +4258,7 @@ RectTransform:
   m_Children:
   - {fileID: 1535017316}
   - {fileID: 1837544913}
+  - {fileID: 1405073419}
   m_Father: {fileID: 724784116}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3495,8 +4503,9 @@ GameObject:
   - component: {fileID: 1054969903}
   - component: {fileID: 1054969902}
   - component: {fileID: 1054969901}
-  - component: {fileID: 1054969904}
   - component: {fileID: 1054969905}
+  - component: {fileID: 1054969907}
+  - component: {fileID: 1054969904}
   - component: {fileID: 1054969906}
   m_Layer: 0
   m_Name: City 8
@@ -3627,7 +4636,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 8
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 400
@@ -3635,6 +4643,29 @@ MonoBehaviour:
   _spawn: {fileID: 483881943}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &1054969907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054969899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 19
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1069168737
 GameObject:
   m_ObjectHideFlags: 0
@@ -3780,8 +4811,9 @@ GameObject:
   - component: {fileID: 1076874163}
   - component: {fileID: 1076874162}
   - component: {fileID: 1076874164}
-  - component: {fileID: 1076874165}
   - component: {fileID: 1076874166}
+  - component: {fileID: 1076874168}
+  - component: {fileID: 1076874165}
   - component: {fileID: 1076874167}
   m_Layer: 0
   m_Name: City 16
@@ -3912,7 +4944,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 16
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 230
@@ -3920,6 +4951,29 @@ MonoBehaviour:
   _spawn: {fileID: 1558559854}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &1076874168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076874161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 18
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1084561732
 GameObject:
   m_ObjectHideFlags: 0
@@ -3931,8 +4985,9 @@ GameObject:
   - component: {fileID: 1084561736}
   - component: {fileID: 1084561735}
   - component: {fileID: 1084561734}
-  - component: {fileID: 1084561737}
   - component: {fileID: 1084561738}
+  - component: {fileID: 1084561740}
+  - component: {fileID: 1084561737}
   - component: {fileID: 1084561739}
   m_Layer: 0
   m_Name: City 19
@@ -4063,7 +5118,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 19
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 650
@@ -4071,6 +5125,109 @@ MonoBehaviour:
   _spawn: {fileID: 483847397}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &1084561740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084561732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 17
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!1 &1137981906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1137981907}
+  - component: {fileID: 1137981909}
+  - component: {fileID: 1137981908}
+  m_Layer: 0
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1137981907
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137981906}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 475045871}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1137981908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137981906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Rebuy
+--- !u!222 &1137981909
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137981906}
+  m_CullTransparentMesh: 1
 --- !u!1 &1202262059
 GameObject:
   m_ObjectHideFlags: 0
@@ -4162,8 +5319,9 @@ GameObject:
   - component: {fileID: 1210461703}
   - component: {fileID: 1210461702}
   - component: {fileID: 1210461701}
-  - component: {fileID: 1210461704}
   - component: {fileID: 1210461705}
+  - component: {fileID: 1210461707}
+  - component: {fileID: 1210461704}
   - component: {fileID: 1210461706}
   m_Layer: 0
   m_Name: World Championships
@@ -4293,7 +5451,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 300
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 0
@@ -4301,6 +5458,29 @@ MonoBehaviour:
   _spawn: {fileID: 0}
   _uiBuyCity: {fileID: 0}
   _uiBuildHouse: {fileID: 0}
+  _uiRebuy: {fileID: 0}
+--- !u!114 &1210461707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210461699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 16
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1235486114
 GameObject:
   m_ObjectHideFlags: 0
@@ -4312,8 +5492,9 @@ GameObject:
   - component: {fileID: 1235486118}
   - component: {fileID: 1235486117}
   - component: {fileID: 1235486116}
-  - component: {fileID: 1235486119}
   - component: {fileID: 1235486120}
+  - component: {fileID: 1235486122}
+  - component: {fileID: 1235486119}
   - component: {fileID: 1235486121}
   m_Layer: 0
   m_Name: City 23
@@ -4444,7 +5625,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 23
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 360
@@ -4452,6 +5632,29 @@ MonoBehaviour:
   _spawn: {fileID: 223447254}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &1235486122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235486114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 15
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1273534840
 GameObject:
   m_ObjectHideFlags: 0
@@ -4463,8 +5666,9 @@ GameObject:
   - component: {fileID: 1273534844}
   - component: {fileID: 1273534843}
   - component: {fileID: 1273534842}
-  - component: {fileID: 1273534845}
   - component: {fileID: 1273534846}
+  - component: {fileID: 1273534848}
+  - component: {fileID: 1273534845}
   - component: {fileID: 1273534847}
   m_Layer: 0
   m_Name: City 14
@@ -4595,7 +5799,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 14
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 400
@@ -4603,6 +5806,132 @@ MonoBehaviour:
   _spawn: {fileID: 548713236}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &1273534848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273534840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 14
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!1 &1278377251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1278377255}
+  - component: {fileID: 1278377254}
+  - component: {fileID: 1278377253}
+  - component: {fileID: 1278377252}
+  m_Layer: 0
+  m_Name: Rebuy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1278377252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278377251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1278377253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278377251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1278377254
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278377251}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1278377255
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278377251}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 324714851}
+  - {fileID: 475045871}
+  - {fileID: 371666950}
+  m_Father: {fileID: 724784116}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1294233836
 GameObject:
   m_ObjectHideFlags: 0
@@ -4778,8 +6107,9 @@ GameObject:
   - component: {fileID: 1358270969}
   - component: {fileID: 1358270968}
   - component: {fileID: 1358270967}
-  - component: {fileID: 1358270970}
   - component: {fileID: 1358270971}
+  - component: {fileID: 1358270973}
+  - component: {fileID: 1358270970}
   - component: {fileID: 1358270972}
   m_Layer: 0
   m_Name: City 27
@@ -4910,7 +6240,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 27
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 120
@@ -4918,6 +6247,29 @@ MonoBehaviour:
   _spawn: {fileID: 2112161153}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &1358270973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358270965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 13
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1359576368
 GameObject:
   m_ObjectHideFlags: 0
@@ -4951,6 +6303,140 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1405073418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1405073419}
+  - component: {fileID: 1405073422}
+  - component: {fileID: 1405073421}
+  - component: {fileID: 1405073420}
+  m_Layer: 0
+  m_Name: BtnClose
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1405073419
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405073418}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 451854655}
+  m_Father: {fileID: 1004090728}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -399.99997}
+  m_SizeDelta: {x: 100, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1405073420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405073418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1405073421}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1474566637}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: CloseBuyHouse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1405073421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405073418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1405073422
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405073418}
+  m_CullTransparentMesh: 1
 --- !u!1 &1406437290
 GameObject:
   m_ObjectHideFlags: 0
@@ -4993,8 +6479,9 @@ GameObject:
   - component: {fileID: 1410140740}
   - component: {fileID: 1410140739}
   - component: {fileID: 1410140738}
-  - component: {fileID: 1410140741}
   - component: {fileID: 1410140742}
+  - component: {fileID: 1410140744}
+  - component: {fileID: 1410140741}
   - component: {fileID: 1410140743}
   m_Layer: 0
   m_Name: City 15
@@ -5125,7 +6612,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 15
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 130
@@ -5133,6 +6619,29 @@ MonoBehaviour:
   _spawn: {fileID: 2013252314}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &1410140744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410140736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 12
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1459456589
 GameObject:
   m_ObjectHideFlags: 0
@@ -5175,8 +6684,9 @@ GameObject:
   - component: {fileID: 1464614192}
   - component: {fileID: 1464614191}
   - component: {fileID: 1464614190}
-  - component: {fileID: 1464614193}
   - component: {fileID: 1464614194}
+  - component: {fileID: 1464614196}
+  - component: {fileID: 1464614193}
   - component: {fileID: 1464614195}
   m_Layer: 0
   m_Name: Start
@@ -5306,7 +6816,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 100
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 0
@@ -5314,6 +6823,29 @@ MonoBehaviour:
   _spawn: {fileID: 0}
   _uiBuyCity: {fileID: 0}
   _uiBuildHouse: {fileID: 0}
+  _uiRebuy: {fileID: 0}
+--- !u!114 &1464614196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464614188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 11
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1474566634
 GameObject:
   m_ObjectHideFlags: 0
@@ -5386,6 +6918,8 @@ MonoBehaviour:
   _rollUI: {fileID: 795617411}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _houseLevel1: {fileID: 1704378683}
+  _uiRebuy: {fileID: 1278377251}
 --- !u!1 &1485689299
 GameObject:
   m_ObjectHideFlags: 0
@@ -5530,7 +7064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1284265, g: 0.6321627, b: 0.6981132, a: 1}
+  m_Color: {r: 0.1284265, g: 0.6321627, b: 0.6981132, a: 0.8627451}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5659,8 +7193,9 @@ GameObject:
   - component: {fileID: 1595306205}
   - component: {fileID: 1595306204}
   - component: {fileID: 1595306203}
-  - component: {fileID: 1595306206}
   - component: {fileID: 1595306207}
+  - component: {fileID: 1595306209}
+  - component: {fileID: 1595306206}
   - component: {fileID: 1595306208}
   m_Layer: 0
   m_Name: City 1
@@ -5791,7 +7326,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 1
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 90
@@ -5799,6 +7333,29 @@ MonoBehaviour:
   _spawn: {fileID: 1606934548}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &1595306209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595306201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 10
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1596305209
 GameObject:
   m_ObjectHideFlags: 0
@@ -5810,8 +7367,9 @@ GameObject:
   - component: {fileID: 1596305213}
   - component: {fileID: 1596305212}
   - component: {fileID: 1596305211}
-  - component: {fileID: 1596305214}
   - component: {fileID: 1596305215}
+  - component: {fileID: 1596305217}
+  - component: {fileID: 1596305214}
   - component: {fileID: 1596305216}
   m_Layer: 0
   m_Name: City 12
@@ -5942,7 +7500,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 12
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 120
@@ -5950,6 +7507,29 @@ MonoBehaviour:
   _spawn: {fileID: 1599941246}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &1596305217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596305209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 9
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1599941245
 GameObject:
   m_ObjectHideFlags: 0
@@ -6106,8 +7686,9 @@ GameObject:
   - component: {fileID: 1658547218}
   - component: {fileID: 1658547217}
   - component: {fileID: 1658547216}
-  - component: {fileID: 1658547219}
   - component: {fileID: 1658547220}
+  - component: {fileID: 1658547222}
+  - component: {fileID: 1658547219}
   - component: {fileID: 1658547221}
   m_Layer: 0
   m_Name: City 10
@@ -6238,7 +7819,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 10
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 600
@@ -6246,6 +7826,29 @@ MonoBehaviour:
   _spawn: {fileID: 1406437291}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &1658547222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658547214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 8
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1669231194
 GameObject:
   m_ObjectHideFlags: 0
@@ -6558,8 +8161,9 @@ GameObject:
   - component: {fileID: 1726374814}
   - component: {fileID: 1726374813}
   - component: {fileID: 1726374812}
-  - component: {fileID: 1726374815}
   - component: {fileID: 1726374816}
+  - component: {fileID: 1726374818}
+  - component: {fileID: 1726374815}
   - component: {fileID: 1726374817}
   m_Layer: 0
   m_Name: City 26
@@ -6690,7 +8294,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 26
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 900
@@ -6698,6 +8301,29 @@ MonoBehaviour:
   _spawn: {fileID: 1328652955}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &1726374818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726374810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 7
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1732643662
 GameObject:
   m_ObjectHideFlags: 0
@@ -6836,7 +8462,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787642349}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.44, y: -5.12, z: -17.5}
+  m_LocalPosition: {x: -2.25, y: -4.994, z: -17.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6854,8 +8480,9 @@ GameObject:
   - component: {fileID: 1835086653}
   - component: {fileID: 1835086652}
   - component: {fileID: 1835086651}
-  - component: {fileID: 1835086654}
   - component: {fileID: 1835086655}
+  - component: {fileID: 1835086657}
+  - component: {fileID: 1835086654}
   - component: {fileID: 1835086656}
   m_Layer: 0
   m_Name: City 5
@@ -6986,7 +8613,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 5
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 300
@@ -6994,6 +8620,29 @@ MonoBehaviour:
   _spawn: {fileID: 576468397}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &1835086657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835086649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 6
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1836518004
 GameObject:
   m_ObjectHideFlags: 0
@@ -7005,8 +8654,9 @@ GameObject:
   - component: {fileID: 1836518008}
   - component: {fileID: 1836518007}
   - component: {fileID: 1836518006}
-  - component: {fileID: 1836518009}
   - component: {fileID: 1836518010}
+  - component: {fileID: 1836518012}
+  - component: {fileID: 1836518009}
   - component: {fileID: 1836518011}
   m_Layer: 0
   m_Name: City 11
@@ -7137,7 +8787,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 11
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 100
@@ -7145,6 +8794,29 @@ MonoBehaviour:
   _spawn: {fileID: 1459456590}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &1836518012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836518004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 5
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1837544912
 GameObject:
   m_ObjectHideFlags: 0
@@ -7290,8 +8962,9 @@ GameObject:
   - component: {fileID: 1864733649}
   - component: {fileID: 1864733648}
   - component: {fileID: 1864733647}
-  - component: {fileID: 1864733650}
   - component: {fileID: 1864733651}
+  - component: {fileID: 1864733653}
+  - component: {fileID: 1864733650}
   - component: {fileID: 1864733652}
   m_Layer: 0
   m_Name: City 21
@@ -7422,7 +9095,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 21
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 740
@@ -7430,6 +9102,29 @@ MonoBehaviour:
   _spawn: {fileID: 1882261930}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &1864733653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864733645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 4
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1873904417
 GameObject:
   m_ObjectHideFlags: 0
@@ -7594,7 +9289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1284265, g: 0.6321627, b: 0.6981132, a: 1}
+  m_Color: {r: 0.1284265, g: 0.6321627, b: 0.6981132, a: 0.8627451}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7630,8 +9325,9 @@ GameObject:
   - component: {fileID: 1945428400}
   - component: {fileID: 1945428399}
   - component: {fileID: 1945428398}
-  - component: {fileID: 1945428401}
   - component: {fileID: 1945428402}
+  - component: {fileID: 1945428404}
+  - component: {fileID: 1945428401}
   - component: {fileID: 1945428403}
   m_Layer: 0
   m_Name: City 25
@@ -7762,7 +9458,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 25
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 720
@@ -7770,6 +9465,29 @@ MonoBehaviour:
   _spawn: {fileID: 589048757}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &1945428404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945428396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 3
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1963721075
 GameObject:
   m_ObjectHideFlags: 0
@@ -7781,8 +9499,9 @@ GameObject:
   - component: {fileID: 1963721079}
   - component: {fileID: 1963721078}
   - component: {fileID: 1963721077}
-  - component: {fileID: 1963721080}
   - component: {fileID: 1963721081}
+  - component: {fileID: 1963721083}
+  - component: {fileID: 1963721080}
   - component: {fileID: 1963721082}
   m_Layer: 0
   m_Name: City 22
@@ -7913,7 +9632,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 22
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 440
@@ -7921,6 +9639,29 @@ MonoBehaviour:
   _spawn: {fileID: 1337384600}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &1963721083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963721075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 2
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &2013252313
 GameObject:
   m_ObjectHideFlags: 0
@@ -7963,8 +9704,9 @@ GameObject:
   - component: {fileID: 2062689910}
   - component: {fileID: 2062689909}
   - component: {fileID: 2062689908}
-  - component: {fileID: 2062689911}
   - component: {fileID: 2062689912}
+  - component: {fileID: 2062689914}
+  - component: {fileID: 2062689911}
   - component: {fileID: 2062689913}
   m_Layer: 0
   m_Name: City 17
@@ -8095,7 +9837,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdCity: 17
-  IdOwner: 0
   HasPlayer: 0
   WasBought: 0
   InitialPrice: 450
@@ -8103,6 +9844,29 @@ MonoBehaviour:
   _spawn: {fileID: 532822607}
   _uiBuyCity: {fileID: 1004090727}
   _uiBuildHouse: {fileID: 180611723}
+  _uiRebuy: {fileID: 1278377251}
+--- !u!114 &2062689914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062689906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 1
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &2112161152
 GameObject:
   m_ObjectHideFlags: 0
