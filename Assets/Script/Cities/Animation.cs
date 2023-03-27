@@ -17,6 +17,7 @@ public class Animation : MonoBehaviour
         transform.position = defaultPos;
     }
 
+
     private void OnTriggerEnter(Collider other)
     {
 
@@ -27,7 +28,6 @@ public class Animation : MonoBehaviour
         {
 
             transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
-            
             Invoke("ReturnPosition", 0.2f);
 
         }

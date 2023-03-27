@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class City : MonoBehaviourPunCallbacks
 {
-    public int IdCity;
     public int? IdOwner;
     public int LevelCity { get => _levelCity; private set => _levelCity = value; }
     public bool WasBought { get => _wasBought; private set => _wasBought = value; }
@@ -16,11 +15,9 @@ public class City : MonoBehaviourPunCallbacks
     public float RentPrice { get; private set; }
 
     public GameObject Player { get; set; }
-
     private GameObject _flag;
 
     private bool _wasBought;
-    private bool _isOwn;
     public int _levelCity;
 
 
@@ -38,7 +35,6 @@ public class City : MonoBehaviourPunCallbacks
     private void Update()
     {
 
-        photonView.RPC("HasOwn", RpcTarget.All);
     }
 
     [PunRPC]
@@ -46,7 +42,6 @@ public class City : MonoBehaviourPunCallbacks
     {
         _wasBought = true;
     }
-
 
 
     public void BuildFlag()
@@ -58,7 +53,7 @@ public class City : MonoBehaviourPunCallbacks
 
             _flag = PhotonNetwork.Instantiate("PurchasedFlag", _spawn.position, Quaternion.identity) as GameObject;
 
-            _flag.name = "PurchasedFlag" + IdCity;
+            _flag.name = "PurchasedFlag" + gameObject.GetComponent<IdCity>().ID ;
         }
         else if (gameObject.CompareTag("UpCity") || gameObject.CompareTag("DownCity"))
         {
@@ -66,23 +61,22 @@ public class City : MonoBehaviourPunCallbacks
 
             _flag = PhotonNetwork.Instantiate("PurchasedFlag", _spawn.position, Quaternion.identity) as GameObject;
 
-            _flag.name = "PurchasedFlag" + IdCity;
+            _flag.name = "PurchasedFlag" + gameObject.GetComponent<IdCity>().ID;
         }
 
         _levelCity++;
     }
 
-
     public void BuildHouse()
     {
 
-        GameObject flag = GameObject.Find("PurchasedFlag" + IdCity);
+        GameObject flag = GameObject.Find("PurchasedFlag" + gameObject.GetComponent<IdCity>().ID);
         if (flag != null)
         {
             PhotonNetwork.Destroy(flag);
         }
 
-        GameObject house;
+        GameObject house = null;
 
         if (_levelCity == 1)
         {
@@ -91,7 +85,7 @@ public class City : MonoBehaviourPunCallbacks
                 _spawn.position = new Vector3(transform.position.x + 1, transform.position.y + 0.4f, transform.position.z);
 
                 house = PhotonNetwork.Instantiate("HouseLevel1", _spawn.position, Quaternion.identity) as GameObject;
-                house.name = "HouseLevel1-" + IdCity;
+                house.name = "HouseLevel1-" + gameObject.GetComponent<IdCity>().ID;
 
             }
             else if (gameObject.CompareTag("UpCity") || gameObject.CompareTag("DownCity"))
@@ -99,7 +93,7 @@ public class City : MonoBehaviourPunCallbacks
                 _spawn.position = new Vector3(transform.position.x, transform.position.y + 0.4f, transform.position.z + 1);
 
                 house = PhotonNetwork.Instantiate("HouseLevel1", _spawn.position, Quaternion.identity) as GameObject;
-                house.name = "HouseLevel1-" + IdCity;
+                house.name = "HouseLevel1-" + gameObject.GetComponent<IdCity>().ID;
 
             }
         }
@@ -120,24 +114,26 @@ public class City : MonoBehaviourPunCallbacks
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            HasPlayer = true;
-            Player = other.gameObject;
-     
-            if (Player.GetComponent<PlayerScript>().RecipientIdCity == this.IdCity && _wasBought == false)
-            {
-                Invoke("EnableUIBuyCity", 0.5f);
-            }
-            else if (Player.GetComponent<PlayerScript>().RecipientIdCity == this.IdCity && _wasBought && Player.GetComponent<PlayerScript>().ID == IdOwner)
-            {
-                Invoke("EnableUIBuildHouse", 0.5f);
-            }else if (Player.GetComponent<PlayerScript>().RecipientIdCity == this.IdCity && _wasBought && Player.GetComponent<PlayerScript>().ID != IdOwner)
-            {
-                _uiRebuy.SetActive(true);
-            }
 
-        }
+            if (other.gameObject.CompareTag("Player"))
+            {
+                HasPlayer = true;
+                Player = other.gameObject;
+
+                if (Player.GetComponent<PlayerScript>().RecipientIdCity == gameObject.GetComponent<IdCity>().ID && _wasBought == false)
+                {
+                    Invoke("EnableUIBuyCity", 0.5f);
+                }
+                else if (Player.GetComponent<PlayerScript>().RecipientIdCity == gameObject.GetComponent<IdCity>().ID && _wasBought && Player.GetComponent<PlayerScript>().ID == IdOwner)
+                {
+                    Invoke("EnableUIBuildHouse", 0.5f);
+                }
+                else if (Player.GetComponent<PlayerScript>().RecipientIdCity == gameObject.GetComponent<IdCity>().ID && _wasBought && Player.GetComponent<PlayerScript>().ID != IdOwner)
+                {
+                    _uiRebuy.SetActive(true);
+                }
+
+            }
 
     }
 

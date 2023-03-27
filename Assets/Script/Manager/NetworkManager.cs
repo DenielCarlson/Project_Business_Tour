@@ -10,6 +10,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public static NetworkManager Instance;
     public Text ServerInfo;
 
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -68,7 +69,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         ServerInfo.text += "\nOutro jogador entou na sala, jogador nickname: " + newPlayer.NickName;
-       if (PhotonNetwork.PlayerList.Length == 2)
+      if (PhotonNetwork.PlayerList.Length == 2)
         {
             if (PhotonNetwork.IsMasterClient)
             {

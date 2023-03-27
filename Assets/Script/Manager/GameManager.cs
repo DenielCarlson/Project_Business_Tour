@@ -3,7 +3,6 @@ using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,8 +22,9 @@ public class GameManager : MonoBehaviourPunCallbacks
     private int _currentPlayerTurnIndex;
     //Número que é aumentado a cada turno, necessário para decidir o jogador seguinte
     private int _turnCount;
+    private byte _count;
 
-    private bool _buttonRollValidation;
+    private bool _isButtonRollPressed;
 
     //spawn dos objetos de jogadores
     [SerializeField] private Transform _spawn;
@@ -41,6 +41,13 @@ public class GameManager : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject _uiBuildHouse;
     [SerializeField] private Button _houseLevel1;
     [SerializeField] private GameObject _uiRebuy;
+    [SerializeField] private GameObject _uiStart;
+    [SerializeField] private GameObject _uiLostIsland;
+    [SerializeField] private GameObject _uiWorldChampionship;
+    [SerializeField] private GameObject _uiWorldTour;
+
+    [SerializeField] private Material[] _materials;
+
 
     void Awake()
     {
@@ -55,6 +62,8 @@ public class GameManager : MonoBehaviourPunCallbacks
         _playerObjects = new List<GameObject>();
         _currentPlayerTurnIndex = 0;
         _rollUI.SetActive(false);
+        _isButtonRollPressed = false;
+        _count = 0;
 
         //-----------------------------------
         currentCity = null;
@@ -64,11 +73,14 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     private void Update()
     {
+        SetColorPlayer();
+
         //Organiza a lista em ordem de entrada para todos os jogadores
         _players.Sort((p1, p2) => p1.ActorNumber.CompareTo(p2.ActorNumber));
         TurnSystem();
         CurrentPlayerAndCity();
         ButtonsHouseValidation();
+
     }
 
 
@@ -76,7 +88,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     [PunRPC]
     void NextTurn()
     {
-        _buttonRollValidation = false;
+        _isButtonRollPressed = false;
         _turnCount++;
         _currentPlayerTurnIndex = _turnCount % _players.Count;
     }
@@ -91,8 +103,9 @@ public class GameManager : MonoBehaviourPunCallbacks
     //Método que é atrelado ao btnRoll, que faz o player jogar os dados e passar o turno
     public void OnRollDiceClick()
     {
+
         OnRolledDice();
-        _buttonRollValidation = true;
+        _isButtonRollPressed = true;
     }
 
     //Lógica dos dados, onde o player atual jogar os dados e faz o playerObj se movimentar no tabuleiro
@@ -109,6 +122,7 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
 
         int dice = Random.Range(2, 13);
+        _serverInfo.text = dice.ToString();
         currentPlayerTurn.GetComponent<PlayerScript>().CityIndex(dice);
     }
 
@@ -118,14 +132,15 @@ public class GameManager : MonoBehaviourPunCallbacks
 
         if (IsCurrentPlayerTurn())
         {
-            if (_buttonRollValidation == false)
+            if (_isButtonRollPressed == false)
             {
                 _rollUI.SetActive(true);
             }
             else
             {
-                _rollUI.SetActive(false);
+                _rollUI?.SetActive(false);
             }
+
         }
         else
         {
@@ -144,12 +159,33 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     }
 
+    void SetColorPlayer()
+    {
+        foreach (var player in PlayerObjects)
+        {
 
+            if (player.GetComponent<PlayerScript>().ID == 1)
+            {
+                _materials[0].color = Color.blue;
+                player.GetComponent<Renderer>().material = _materials[0];
+            }else if (player.GetComponent<PlayerScript>().ID == 2)
+            {
+                _materials[1].color = Color.yellow;
+                player.GetComponent<Renderer>().material = _materials[1];
+            }
+            else if (player.GetComponent<PlayerScript>().ID == 3)
+            {
+                _materials[2].color = Color.green;
+                player.GetComponent<Renderer>().material = _materials[2];
+            }
+            else if (player.GetComponent<PlayerScript>().ID == 4)
+            {
+                _materials[3].color = Color.red;
+                player.GetComponent<Renderer>().material = _materials[3];
+            }
 
-
-
-
-
+        }
+    }
 
 
 
@@ -172,6 +208,7 @@ public class GameManager : MonoBehaviourPunCallbacks
 
 
     //Esse método  ele pega o objeto do jogador atual e apartir disso localiza a cidade em que o jogador atual está e a guarda em uma variável
+
     private void CurrentPlayerAndCity()
     {
         foreach (var obj in _playerObjects)
@@ -280,6 +317,33 @@ public class GameManager : MonoBehaviourPunCallbacks
         photonView.RPC("NextTurn", RpcTarget.All);
     }
 
+    //esse faz a mesma função do método acima, a diferença é que esse será chamando no close da tela do Lost Island
+    public void CloseLostIsland()
+    {
+        _uiLostIsland.SetActive(false);
+        photonView.RPC("NextTurn", RpcTarget.All);
+    }
+
+    //esse faz a mesma função do método acima, a diferença é que esse será chamando no close da tela do World Championship
+    public void CloseWorldChampionship()
+    {
+        _uiWorldChampionship.SetActive(false);
+        photonView.RPC("NextTurn", RpcTarget.All);
+    }
+
+    //esse faz a mesma função do método acima, a diferença é que esse será chamando no close da tela do World Tour
+    public void CloseWorldTour()
+    {
+        _uiWorldTour.SetActive(false);
+        photonView.RPC("NextTurn", RpcTarget.All);
+    }
+
+    public void CloseStart()
+    {
+        _uiStart.SetActive(false);
+        photonView.RPC("NextTurn", RpcTarget.All);
+    }
+
 
     //esse método valida se o button pode ou não ser interativo para o player atual
     private void ButtonsHouseValidation()
@@ -295,5 +359,6 @@ public class GameManager : MonoBehaviourPunCallbacks
         {
             _houseLevel1.interactable = true;
         }
+
     }
 }

@@ -1,10 +1,10 @@
 using Photon.Pun;
 using Photon.Realtime;
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+using TMPro;
 using UnityEngine;
-using UnityEngine.Android;
 
 public class PlayerScript : MonoBehaviourPunCallbacks
 {
@@ -12,6 +12,8 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     public int CityIndexVar { get => _cityIndex; private set => _cityIndex = value; }
 
     private GameObject[] _cities;//Array que vai Armazenar todos os blocos do jogo
+
+    private Renderer _renderer;
 
     private Vector3 direction;//Direção que o player vai seguir
     private Vector3 _currentPos;//posição atual do player
@@ -22,6 +24,9 @@ public class PlayerScript : MonoBehaviourPunCallbacks
     //Essas variáveis verificam eu qual lado meu player está
     public bool _isRightOrLeft;
     public bool _isUpOrDown;
+
+
+    public int Round { get => _round; private set => _round = value; }
 
     [SerializeField] private int _round = 0;//Round que o player tá
     [SerializeField] private float _speed;//Velocidade que o player se movimenta
@@ -35,6 +40,11 @@ public class PlayerScript : MonoBehaviourPunCallbacks
 
     public List<GameObject> MyCities;
 
+
+
+
+
+    //----------------------------------------------------------------------------------------------
     [PunRPC]
     public void Initialize(Player player)
     {
@@ -44,6 +54,13 @@ public class PlayerScript : MonoBehaviourPunCallbacks
         GameManager.Instance.Players.Add(player);
         GameManager.Instance.PlayerObjects.Add(gameObject);
     }
+
+
+
+
+
+
+
 
     private void Awake()
     {
@@ -91,17 +108,19 @@ public class PlayerScript : MonoBehaviourPunCallbacks
             GameObject.Find("City 28"),
         };
 
+        _renderer = GetComponent<Renderer>();
         _cityIndex = 0;//_cityIndex sempre começará com 0, pois é o index do bloco "Start"
     }
 
 
     private void Update()
     {
+
         if (photonView.IsMine)
         {
             Move();
-
         }
+        
     }
 
     private void Move()
@@ -114,14 +133,12 @@ public class PlayerScript : MonoBehaviourPunCallbacks
         else if (_isUpOrDown)
         {
             _currentPos = new Vector3(_cities[_cityIndex].transform.position.x, transform.position.y, _cities[_cityIndex].transform.position.z - 1);
-            
+
         }
         else
         {
             _currentPos = new Vector3(_cities[_cityIndex].transform.position.x, transform.position.y, _cities[_cityIndex].transform.position.z);
         }
-        RecipientIdCity = _cities[_cityIndex].GetComponent<City>().IdCity;
-
         // Se a poção do player for diferente de _currentPos, ele deve se mover pelo tabuleiro até que sua posição seja igual a _currentPos
         if (transform.position != _currentPos)
         {
@@ -130,6 +147,9 @@ public class PlayerScript : MonoBehaviourPunCallbacks
             transform.Translate(direction, Space.Self);
 
         }
+
+        RecipientIdCity = _cities[_cityIndex].GetComponent<IdCity>().ID;
+
     }
 
     public void CityIndex(int dice)//Esse método vai fazer com que _cityIndex receba o resultado do dado
@@ -138,10 +158,14 @@ public class PlayerScript : MonoBehaviourPunCallbacks
 
         //Se randomNum for maior que 31, randomNum será ele menos 31, assim restando a diferença e completando a volta no tabuleiro
         //Isso evita com que o  _cityIndex que serve de parâmetro para _cities[], não ultrapasse os limites do vetor
-        if (_cityIndex > 31)
+        if (_cityIndex == 32)
+        {
+            _cityIndex = 0;
+        }
+        else if (_cityIndex > 32)
         {
             int deltaRandomNum = _cityIndex - 31;
-            _cityIndex = 0 + deltaRandomNum;
+            _cityIndex = 0 + deltaRandomNum - 1 ;
         }
     }
 
@@ -157,6 +181,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
             _isUpOrDown = false;
 
             transform.position = new Vector3(other.gameObject.transform.position.x - 1, transform.position.y, other.gameObject.transform.position.z);
+
         }
 
         //Se meu Player estiver nas cidades de cima ou de baixo, seu eixo z será o mesmo da cidade, porém - 1 
@@ -165,6 +190,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
             _isUpOrDown = true;
             _isRightOrLeft = false;
             transform.position = new Vector3(other.gameObject.transform.position.x, transform.position.y, other.gameObject.transform.position.z - 1);
+
         }
 
         //Se meu player não estiver nem nas cidade dos lados nem em cima ou em baixo, sua posição será a mesma da cidade onde ele se encontra
