@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8cf3449277e7cc54d9ff3d46d1fff692, type: 2}
+  - {fileID: 2100000, guid: 2aed07351a44f2946a5b2dd49305df73, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -152,7 +152,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 55e856b9d806175418992274682cfe72, type: 2}
+  - {fileID: 2100000, guid: ac07fb16c5657f24a869aede6b8331c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -246,7 +246,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5346b4b25f9b12e49ab69d234d2617fe, type: 2}
+  - {fileID: 2100000, guid: ac07fb16c5657f24a869aede6b8331c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -330,7 +330,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8cf3449277e7cc54d9ff3d46d1fff692, type: 2}
+  - {fileID: 2100000, guid: ac07fb16c5657f24a869aede6b8331c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: -8688483622290595760}
   - component: {fileID: -6544494941583915519}
   m_Layer: 0
-  m_Name: PurchasedFlag
+  m_Name: PurchasedFlagPlayer4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -429,7 +429,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 55e856b9d806175418992274682cfe72, type: 2}
+  - {fileID: 2100000, guid: ac07fb16c5657f24a869aede6b8331c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

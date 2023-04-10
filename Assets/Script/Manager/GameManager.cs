@@ -271,7 +271,7 @@ public class GameManager : MonoBehaviourPunCallbacks
 
             //Como essa função só aparece quando o jogador clicka no button de comprar, então toda vez que ele comprar, irá spawnar uma bandeira na cidade que ele comprou
             //Porém essa função ainda está incompleta, pois se o jogador não tiver dinheiro, a bandeira não pode aparecer e portando no futuro essa função será melhorada ou substituída 
-            currentCity.GetComponent<City>().BuildFlag();
+            currentCity.GetComponent<City>().BuildFlag(currentPlayer.GetComponent<PlayerScript>().ID);
         }
     }
 

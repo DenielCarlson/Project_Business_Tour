@@ -44,14 +44,14 @@ public class City : MonoBehaviourPunCallbacks
     }
 
 
-    public void BuildFlag()
+    public void BuildFlag(int playerID)
     {
 
         if (gameObject.CompareTag("LeftCity") || gameObject.CompareTag("RightCity"))
         {
             _spawn.position = new Vector3(transform.position.x + 1, transform.position.y + 0.4f, transform.position.z);
 
-            _flag = PhotonNetwork.Instantiate("PurchasedFlag", _spawn.position, Quaternion.identity) as GameObject;
+            _flag = PhotonNetwork.Instantiate("PurchasedFlagPlayer" + playerID, _spawn.position, Quaternion.identity) as GameObject;
 
             _flag.name = "PurchasedFlag" + gameObject.GetComponent<IdCity>().ID ;
         }
@@ -59,7 +59,7 @@ public class City : MonoBehaviourPunCallbacks
         {
             _spawn.position = new Vector3(transform.position.x, transform.position.y + 0.4f, transform.position.z + 1);
 
-            _flag = PhotonNetwork.Instantiate("PurchasedFlag", _spawn.position, Quaternion.identity) as GameObject;
+            _flag = PhotonNetwork.Instantiate("PurchasedFlagPlayer" + playerID, _spawn.position, Quaternion.identity) as GameObject;
 
             _flag.name = "PurchasedFlag" + gameObject.GetComponent<IdCity>().ID;
         }
